@@ -1,0 +1,16 @@
+#!/usr/bin/ruby
+require 'rubygems'
+require 'cpee-replayer/task'
+
+options = {
+  :host => 'localhost',
+  :port => 9399,
+  :secure => false
+}
+
+Riddl::Server.new(CPEE::Replayer::SERVER, options) do
+  accessible_description true
+  cross_site_xhr true
+
+  use CPEE::Replayer::implementation(@riddl_opts)
+end.loop!

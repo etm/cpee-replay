@@ -1,0 +1,35 @@
+#!/usr/bin/ruby
+curpath = __dir__
+require 'rubygems'
+require 'optparse'
+require 'fileutils'
+
+exname = File.basename($0)
+
+ARGV.options { |opt|
+  opt.summary_indent = ' ' * 2
+  opt.summary_width = 15
+  opt.banner = "Usage:\n#{opt.summary_indent}#{exname} new [DIR] | view [URI] | copy [URI]\n"
+  opt.on("Options:")
+  opt.on("--help", "-h", "This text") { puts opt; exit }
+	opt.on("")
+  opt.on(wrap("new [DIR]         scaffolds a sample replayer service. Add a handler to a cpee instance to automatically handle description changes and start/stop.",78,18,0))
+  opt.parse!
+}
+if (ARGV.length != 2)
+  puts ARGV.options
+  exit
+else
+  command = ARGV[0]
+  dir = ARGV[1]
+end
+
+if command == 'new'
+  if !File.exists?(dir)
+    FileUtils.cp_r(File.join(curpath,'..','server'),dir)
+  else
+    puts 'Directory already exists.'
+  end
+else
+  puts ARGV.options
+end
