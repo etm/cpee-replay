@@ -1,0 +1,790 @@
+---
+log:
+  namespaces:
+    stream: https://cpee.org/datastream/
+    ssn: http://www.w3.org/ns/ssn/
+    sosa: http://www.w3.org/ns/sosa/
+  xes:
+    creator: cpee.org
+    features: nested-attributes
+  extension:
+    time: http://www.xes-standard.org/time.xesext
+    concept: http://www.xes-standard.org/concept.xesext
+    id: http://www.xes-standard.org/identity.xesext
+    lifecycle: http://www.xes-standard.org/lifecycle.xesext
+    cpee: http://cpee.org/cpee.xesext
+    stream: https://cpee.org/datastream/datastream.xesext
+  global:
+    trace:
+      concept:name: __INVALID__
+      cpee:name: __INVALID__
+    event:
+      concept:instance: -1
+      concept:name: __INVALID__
+      concept:endpoint: ''
+      id:id: ''
+      cpee:uuid: ''
+      lifecycle:transition: complete
+      cpee:lifecycle:transition: activity/calling
+      time:timestamp: ''
+  trace:
+    concept:name: 5581
+    cpee:name: X MT45 Control Setter
+    cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+---
+event:
+  concept:instance: 5581
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: ready
+  time:timestamp: '2023-04-28T17:03:16.293+02:00'
+---
+event:
+  concept:instance: 5581
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: set
+    value: "/Plc/DB100.DBX181.1"
+  - name: check
+    value: "/Plc/DB100.DBX164.5"
+  - name: value
+    value: true
+  time:timestamp: '2023-04-28T17:03:16.311+02:00'
+---
+event:
+  concept:instance: 5581
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: description/change
+  cpee:description: |
+    <?xml version="1.0"?>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <call id="a4" endpoint="opc_write">
+        <parameters>
+          <label>Set Var</label>
+          <arguments>
+            <endpoint_url>opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011</endpoint_url>
+            <namespace_index>2</namespace_index>
+            <identifier_type>string</identifier_type>
+            <identifier>!data.set</identifier>
+            <value>!data.value.to_s</value>
+          </arguments>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result"/>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <loop mode="post_test" condition="data.value.to_s != data.check_value.to_s">
+        <_probability>
+          <_probability_min/>
+          <_probability_max/>
+          <_probability_avg/>
+        </_probability>
+        <call id="a6" endpoint="opc_read">
+          <parameters>
+            <label>Read Var</label>
+            <arguments>
+              <endpoint_url>opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011</endpoint_url>
+              <namespace_index>2</namespace_index>
+              <identifier_type>string</identifier_type>
+              <identifier>!data.check</identifier>
+            </arguments>
+          </parameters>
+          <code>
+            <prepare/>
+            <finalize output="result">data.check_value = result.to_s</finalize>
+            <update output="result"/>
+            <rescue output="result"/>
+          </code>
+          <annotations>
+            <_timing>
+              <_timing_weight/>
+              <_timing_avg/>
+              <explanations/>
+            </_timing>
+            <_shifting>
+              <_shifting_type>Duration</_shifting_type>
+            </_shifting>
+            <_context_data_analysis>
+              <probes/>
+              <ips/>
+            </_context_data_analysis>
+            <report>
+              <url/>
+            </report>
+            <_notes>
+              <_notes_general/>
+            </_notes>
+          </annotations>
+          <documentation>
+            <input/>
+            <output/>
+            <implementation>
+              <description/>
+            </implementation>
+            <code>
+              <description/>
+            </code>
+          </documentation>
+        </call>
+      </loop>
+    </description>
+  time:timestamp: '2023-04-28T17:03:16.330+02:00'
+---
+event:
+  concept:instance: 5581
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: endpoints/change
+  data:
+  - name: opc_write
+    value: https-put://centurio.work/ing/opcua/write/
+  - name: opc_read
+    value: https-get://centurio.work/ing/opcua/read/
+  time:timestamp: '2023-04-28T17:03:16.316+02:00'
+---
+event:
+  concept:instance: 5581
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: attributes/change
+  data:
+  - name: info
+    value: X MT45 Control Setter
+  - name: modeltype
+    value: CPEE
+  - name: theme
+    value: default
+  - name: customer
+    value: pilotfabrik
+  - name: status
+    value: development
+  - name: creator
+    value: Christine Ashcreek
+  - name: author
+    value: Juergen Mangler
+  - name: design_stage
+    value: development
+  - name: design_dir
+    value: Turm V4.dir
+  time:timestamp: '2023-04-28T17:03:16.319+02:00'
+---
+event:
+  concept:instance: 5581
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: running
+  time:timestamp: '2023-04-28T17:03:18.590+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Set Var
+  concept:endpoint: https-put://centurio.work/ing/opcua/write/
+  id:id: a4
+  cpee:activity: a4
+  cpee:activity_uuid: b9c0d8171c46e585a184ec69a122013a
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: endpoint_url
+    value: opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011
+  - name: namespace_index
+    value: '2'
+  - name: identifier_type
+    value: string
+  - name: identifier
+    value: "/Plc/DB100.DBX181.1"
+  - name: value
+    value: 'true'
+  time:timestamp: '2023-04-28T17:03:18.593+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Set Var
+  concept:endpoint: https-put://centurio.work/ing/opcua/write/
+  id:id: a4
+  cpee:activity: a4
+  cpee:activity_uuid: b9c0d8171c46e585a184ec69a122013a
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: value
+    data: 'true'
+  time:timestamp: '2023-04-28T17:03:18.875+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Set Var
+  concept:endpoint: https-put://centurio.work/ing/opcua/write/
+  id:id: a4
+  cpee:activity: a4
+  cpee:activity_uuid: b9c0d8171c46e585a184ec69a122013a
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:18.876+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 64a855a413a0276f46295134a472ec12
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: endpoint_url
+    value: opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011
+  - name: namespace_index
+    value: '2'
+  - name: identifier_type
+    value: string
+  - name: identifier
+    value: "/Plc/DB100.DBX164.5"
+  time:timestamp: '2023-04-28T17:03:18.880+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 64a855a413a0276f46295134a472ec12
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: value
+    data: 'false'
+  time:timestamp: '2023-04-28T17:03:19.130+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 64a855a413a0276f46295134a472ec12
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:19.132+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 64a855a413a0276f46295134a472ec12
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: check_value
+    value: 'false'
+  time:timestamp: '2023-04-28T17:03:19.131+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 1a151ca26e710c96bb67f24671139e53
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: endpoint_url
+    value: opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011
+  - name: namespace_index
+    value: '2'
+  - name: identifier_type
+    value: string
+  - name: identifier
+    value: "/Plc/DB100.DBX164.5"
+  time:timestamp: '2023-04-28T17:03:19.135+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 1a151ca26e710c96bb67f24671139e53
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: value
+    data: 'false'
+  time:timestamp: '2023-04-28T17:03:19.399+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 1a151ca26e710c96bb67f24671139e53
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: check_value
+    value: 'false'
+  time:timestamp: '2023-04-28T17:03:19.401+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 1a151ca26e710c96bb67f24671139e53
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:19.401+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: bbce1948cc67d5d4d4d4d8ce77649064
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: endpoint_url
+    value: opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011
+  - name: namespace_index
+    value: '2'
+  - name: identifier_type
+    value: string
+  - name: identifier
+    value: "/Plc/DB100.DBX164.5"
+  time:timestamp: '2023-04-28T17:03:19.404+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: bbce1948cc67d5d4d4d4d8ce77649064
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: value
+    data: 'false'
+  time:timestamp: '2023-04-28T17:03:19.668+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: bbce1948cc67d5d4d4d4d8ce77649064
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:19.670+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: bbce1948cc67d5d4d4d4d8ce77649064
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: check_value
+    value: 'false'
+  time:timestamp: '2023-04-28T17:03:19.670+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 6b99ed3978595e8926427e8b086d504e
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: endpoint_url
+    value: opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011
+  - name: namespace_index
+    value: '2'
+  - name: identifier_type
+    value: string
+  - name: identifier
+    value: "/Plc/DB100.DBX164.5"
+  time:timestamp: '2023-04-28T17:03:19.671+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 6b99ed3978595e8926427e8b086d504e
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: value
+    data: 'false'
+  time:timestamp: '2023-04-28T17:03:19.919+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 6b99ed3978595e8926427e8b086d504e
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:19.922+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 6b99ed3978595e8926427e8b086d504e
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: check_value
+    value: 'false'
+  time:timestamp: '2023-04-28T17:03:19.921+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 3fb894b7ebdf047ec9ef1bc2ff580ef3
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: endpoint_url
+    value: opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011
+  - name: namespace_index
+    value: '2'
+  - name: identifier_type
+    value: string
+  - name: identifier
+    value: "/Plc/DB100.DBX164.5"
+  time:timestamp: '2023-04-28T17:03:19.923+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 3fb894b7ebdf047ec9ef1bc2ff580ef3
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: value
+    data: 'false'
+  time:timestamp: '2023-04-28T17:03:20.184+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 3fb894b7ebdf047ec9ef1bc2ff580ef3
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: check_value
+    value: 'false'
+  time:timestamp: '2023-04-28T17:03:20.185+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 3fb894b7ebdf047ec9ef1bc2ff580ef3
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:20.185+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: c3dd13e82ef353e72c4d09e30f5c8ecf
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: endpoint_url
+    value: opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011
+  - name: namespace_index
+    value: '2'
+  - name: identifier_type
+    value: string
+  - name: identifier
+    value: "/Plc/DB100.DBX164.5"
+  time:timestamp: '2023-04-28T17:03:20.187+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: c3dd13e82ef353e72c4d09e30f5c8ecf
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: value
+    data: 'false'
+  time:timestamp: '2023-04-28T17:03:20.437+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: c3dd13e82ef353e72c4d09e30f5c8ecf
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: check_value
+    value: 'false'
+  time:timestamp: '2023-04-28T17:03:20.438+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: c3dd13e82ef353e72c4d09e30f5c8ecf
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:20.440+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: '09afb7eee63fe5a7ed0b0bbf6af94e73'
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: endpoint_url
+    value: opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011
+  - name: namespace_index
+    value: '2'
+  - name: identifier_type
+    value: string
+  - name: identifier
+    value: "/Plc/DB100.DBX164.5"
+  time:timestamp: '2023-04-28T17:03:20.441+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: '09afb7eee63fe5a7ed0b0bbf6af94e73'
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: value
+    data: 'false'
+  time:timestamp: '2023-04-28T17:03:20.691+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: '09afb7eee63fe5a7ed0b0bbf6af94e73'
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: check_value
+    value: 'false'
+  time:timestamp: '2023-04-28T17:03:20.692+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: b398d9f5018ea9d293493ca90ad9ab45
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: endpoint_url
+    value: opc.tcp://OpcUaClient:SUNDOWN1@localhost:8011
+  - name: namespace_index
+    value: '2'
+  - name: identifier_type
+    value: string
+  - name: identifier
+    value: "/Plc/DB100.DBX164.5"
+  time:timestamp: '2023-04-28T17:03:20.694+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: '09afb7eee63fe5a7ed0b0bbf6af94e73'
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:20.693+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: b398d9f5018ea9d293493ca90ad9ab45
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: value
+    data: 'true'
+  time:timestamp: '2023-04-28T17:03:20.964+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: b398d9f5018ea9d293493ca90ad9ab45
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:20.966+02:00'
+---
+event:
+  concept:instance: 5581
+  concept:name: Read Var
+  concept:endpoint: https-get://centurio.work/ing/opcua/read/
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: b398d9f5018ea9d293493ca90ad9ab45
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: check_value
+    value: 'true'
+  time:timestamp: '2023-04-28T17:03:20.965+02:00'
+---
+event:
+  concept:instance: 5581
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 853d4080-0d53-4aea-93fc-4569a9eb51d0
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: finished
+  time:timestamp: '2023-04-28T17:03:20.967+02:00'

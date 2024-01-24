@@ -1,0 +1,16 @@
+https-put://centurio.work/ing/opcua/write/,ae0a7534eb63db51c9dca2c3d4eca707,c,6449,647
+https-put://centurio.work/ing/opcua/write/,ae0a7534eb63db51c9dca2c3d4eca707,r,7100,430
+https-get://centurio.work/ing/opcua/read/,e57cc7481ca39ec7b4c79a1fb22fe98b,c,7924,613
+https-get://centurio.work/ing/opcua/read/,e57cc7481ca39ec7b4c79a1fb22fe98b,r,8541,431
+https-get://centurio.work/ing/opcua/read/,7a49460d5f79130c555d43300e1cde0b,c,9810,613
+https-get://centurio.work/ing/opcua/read/,7a49460d5f79130c555d43300e1cde0b,r,10427,431
+https-get://centurio.work/ing/opcua/read/,f5d77ca77858411f786af673aa73470f,c,11696,613
+https-get://centurio.work/ing/opcua/read/,f5d77ca77858411f786af673aa73470f,r,12313,431
+https-get://centurio.work/ing/opcua/read/,4f5393590e6c3c80a2c65e5abed2c957,c,13582,613
+https-get://centurio.work/ing/opcua/read/,4f5393590e6c3c80a2c65e5abed2c957,r,14199,431
+https-get://centurio.work/ing/opcua/read/,57e8ecf886ef3fcc0392be711d4addbd,c,15468,613
+https-get://centurio.work/ing/opcua/read/,57e8ecf886ef3fcc0392be711d4addbd,r,16085,431
+https-get://centurio.work/ing/opcua/read/,ff7aff7b4e3b119f50ba31cffbb64183,c,16910,613
+https-get://centurio.work/ing/opcua/read/,ff7aff7b4e3b119f50ba31cffbb64183,r,17971,431
+https-get://centurio.work/ing/opcua/read/,0246024131f6a96df0a9d0a7cc4c89bb,c,19240,613
+https-get://centurio.work/ing/opcua/read/,0246024131f6a96df0a9d0a7cc4c89bb,r,19857,430

@@ -1,0 +1,4784 @@
+---
+log:
+  namespaces:
+    stream: https://cpee.org/datastream/
+    ssn: http://www.w3.org/ns/ssn/
+    sosa: http://www.w3.org/ns/sosa/
+  xes:
+    creator: cpee.org
+    features: nested-attributes
+  extension:
+    time: http://www.xes-standard.org/time.xesext
+    concept: http://www.xes-standard.org/concept.xesext
+    id: http://www.xes-standard.org/identity.xesext
+    lifecycle: http://www.xes-standard.org/lifecycle.xesext
+    cpee: http://cpee.org/cpee.xesext
+    stream: https://cpee.org/datastream/datastream.xesext
+  global:
+    trace:
+      concept:name: __INVALID__
+      cpee:name: __INVALID__
+    event:
+      concept:instance: -1
+      concept:name: __INVALID__
+      concept:endpoint: ''
+      id:id: ''
+      cpee:uuid: ''
+      lifecycle:transition: complete
+      cpee:lifecycle:transition: activity/calling
+      time:timestamp: ''
+  trace:
+    concept:name: 5541
+    cpee:name: "- Turm Batch Processing V2"
+    cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: ready
+  time:timestamp: '2023-04-28T09:19:19.478+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order
+    value:
+      order1:
+      - wr04
+      - wr04
+      - wr08
+      - wr08
+      - wr08
+      order2:
+      - wr04
+      - wr04
+      - wr08
+  - name: qr
+    value: "*268MFA466*TZHZE 001"
+  - name: params
+    value:
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+  time:timestamp: '2023-04-28T09:19:19.506+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: endpoints/change
+  data:
+  - name: timeout
+    value: http://gruppe.wst.univie.ac.at/~mangler/services/timeout.php
+  - name: start_instance
+    value: https://centurio.work/flow/start/instance/
+  - name: start_url
+    value: https://centurio.work/flow/start/url/
+  - name: command
+    value: https://centurio.work/ing/commands/when/
+  - name: ipc_receive
+    value: https-get://centurio.work/ing/correlators/message/receive/
+  - name: magazine_x
+    value: https://centurio.work/data/dpnorth/values/MaxxTurn45/Axis/X/aaLeadP
+  - name: magazine_z
+    value: https://centurio.work/data/dpnorth/values/MaxxTurn45/Axis/Z/aaLeadP
+  time:timestamp: '2023-04-28T09:19:19.519+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: endpoints/change
+  data:
+  - name: timeout
+    value: http://gruppe.wst.univie.ac.at/~mangler/services/timeout.php
+  - name: start_instance
+    value: https://centurio.work/flow/start/instance/
+  - name: start_url
+    value: https://centurio.work/flow/start/url/
+  - name: command
+    value: https://centurio.work/ing/commands/when/
+  - name: ipc_receive
+    value: https-get://centurio.work/ing/correlators/message/receive/
+  - name: magazine_x
+    value: https://centurio.work/data/dpnorth/values/MaxxTurn45/Axis/X/aaLeadP
+  - name: magazine_z
+    value: https://centurio.work/data/dpnorth/values/MaxxTurn45/Axis/Z/aaLeadP
+  time:timestamp: '2023-04-28T09:19:19.519+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: attributes/change
+  data:
+  - name: info
+    value: "- Turm Batch Processing V2"
+  - name: modeltype
+    value: CPEE
+  - name: theme
+    value: extended
+  - name: customer
+    value: pilotfabrik
+  - name: status
+    value: development
+  - name: artefacts
+    value: '[{"group"=>"Batches", "name"=>"Turm"}]'
+  - name: explanation
+    value: Turm %data.qr%
+  - name: creator
+    value: Juergen Mangler
+  - name: author
+    value: Juergen Mangler
+  - name: design_stage
+    value: development
+  - name: design_dir
+    value: Turm V4.dir
+  time:timestamp: '2023-04-28T09:19:19.532+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: description/change
+  cpee:description: |
+    <?xml version="1.0"?>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <manipulate id="a13" label="Get Order Details">data.order = {
+      "order1" =&gt; ["wr04","wr04","wr08","wr08","wr08"],
+      "order2" =&gt; ["wr04","wr04","wr08"]
+    }
+    data.qr = '*268MFA466*TZHZE 001'
+    data.params = [ [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.03,0.4], [0.03,0.4], [0.03,0.4], [0.03,0.4], [0.03,0.4] ]</manipulate>
+      <manipulate id="a12" label="Inititalize Batch">data.tray_positions = [[[-137.87,-178.0,199.0],[-137.27,-98.0,199.0],[-136.67,-18.0,199.0],[-136.07,62.0,199.0],[-135.47,142.0,199.0],[-134.87,222.0,199.0]],[[-87.87,-178.0,199.0],[-87.27,-98.0,199.0],[-86.67,-18.0,199.0],[-86.07,62.0,199.0],[-85.47,142.0,199.0],[-84.87,222.0,199.0]],[[-37.87,-178.0,199.0],[-37.27,-98.0,199.0],[-36.67,-18.0,199.0],[-36.07,62.0,199.0],[-35.47,142.0,199.0],[-34.87,222.0,199.0]],[[12.13,-178.0,199.0],[12.73,-98.0,199.0],[13.33,-18.0,199.0],[13.93,62.0,199.0],[14.53,142.0,199.0],[15.13,222.0,199.0]],[[62.13,-178.0,199.0],[62.73,-98.0,199.0],[63.33,-18.0,199.0],[63.93,62.0,199.0],[64.53,142.0,199.0],[65.13,222.0,199.0]],[[112.13,-178.0,199.0],[112.73,-98.0,199.0],[113.33,-18.0,199.0],[113.93,62.0,199.0],[114.53,142.0,199.0],[115.13,222.0,199.0]],[[162.13,-178.0,199.0],[162.73,-98.0,199.0],[163.33,-18.0,199.0],[163.93,62.0,199.0],[164.53,142.0,199.0],[165.13,222.0,199.0]],[[212.13,-178.0,199.0],[212.73,-98.0,199.0],[213.33,-18.0,199.0],[213.93,62.0,199.0],[214.53,142.0,199.0],[215.13,222.0,199.0]]]
+    data.trays = [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,0],[1,1],[1,2],[1,3],[1,4],[1,5],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[3,0],[3,1],[3,2],[3,3],[3,4],[3,5],[4,0],[4,1],[4,2],[4,3],[4,4],[4,5],[5,0],[5,1],[5,2],[5,3],[5,4],[5,5],[6,0],[6,1],[6,2],[6,3],[6,4],[6,5],[7,0],[7,1],[7,2],[7,3],[7,4],[7,5]]
+    data.initial = nil
+    data.order_list = data.order.map{|k,v| v.map{|e| [k,e]} }.flatten(1)
+    data.programs = {
+      "wr04" =&gt; "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF",
+      "wr08" =&gt; "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+    }
+
+    ### Shuffle parameters
+    data.seed = 1
+    data.params.shuffle!(random: Random.new(data.seed))</manipulate>
+      <loop mode="pre_test" condition="data.order_list.length &gt; 0">
+        <_probability>
+          <_probability_min/>
+          <_probability_max/>
+          <_probability_avg>23</_probability_avg>
+        </_probability>
+        <manipulate id="a7" label="Next QR, Order Item and Tray">data.qr.sub!(/ \d+$/," " + data.from.to_s.rjust(3,'0'))
+    data.order_id, data.order_item = data.order_list.shift
+    data.count ||= -1
+    data.count += 1
+    data.initial = data.initial.nil? ? true : false
+    data.current_tray = data.tray_positions.dig(*(data.trays[(data.count.to_i) % data.trays.count]))</manipulate>
+        <call id="a9" endpoint="start_url">
+          <parameters>
+            <label>Get Machine State Cancelled</label>
+            <method>:post</method>
+            <arguments>
+              <behavior>wait_running</behavior>
+              <url>https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml</url>
+              <init>
+                <check>/Plc/DB21.DBX35.4</check>
+              </init>
+              <endpoints/>
+              <attributes/>
+              <customization/>
+            </arguments>
+          </parameters>
+          <code>
+            <prepare/>
+            <finalize output="result">data.state = result['check_value'].to_s</finalize>
+            <update output="result"/>
+            <rescue output="result"/>
+          </code>
+          <annotations>
+            <_timing>
+              <_timing_weight/>
+              <_timing_avg>0.03</_timing_avg>
+              <explanations/>
+            </_timing>
+            <_shifting>
+              <_shifting_type>Duration</_shifting_type>
+            </_shifting>
+            <_context_data_analysis>
+              <probes/>
+              <ips/>
+            </_context_data_analysis>
+            <report>
+              <url/>
+            </report>
+            <_notes>
+              <_notes_general/>
+            </_notes>
+          </annotations>
+          <documentation>
+            <input/>
+            <output/>
+            <implementation>
+              <description/>
+            </implementation>
+            <code>
+              <description/>
+            </code>
+          </documentation>
+        </call>
+        <choose mode="exclusive">
+          <alternative condition="data.state == 'true' || data.state == true">
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg>100</_probability_avg>
+            </_probability>
+            <call id="a8" endpoint="start_url">
+              <parameters>
+                <label>Spawn Production</label>
+                <method>:post</method>
+                <arguments>
+                  <behavior>fork_running</behavior>
+                  <url>!'https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20' + data.order_item + '.xml'</url>
+                  <init>
+                    <qr>!data.qr</qr>
+                    <current_tray>!data.current_tray</current_tray>
+                    <initial>!data.initial</initial>
+                    <program_params>!(data.params[(data.count.to_i)%data.params.count] + [data.order_id.to_s + ': ' + data.order_item.to_s])</program_params>
+                    <program_patterns>["yyyy","xxxx","aaaa"]</program_patterns>
+                    <program_url>!data.programs[data.order_item]</program_url>
+                  </init>
+                  <endpoints/>
+                  <attributes/>
+                  <customization/>
+                </arguments>
+              </parameters>
+              <annotations>
+                <_timing>
+                  <_timing_weight/>
+                  <_timing_avg>0.01</_timing_avg>
+                  <explanations/>
+                </_timing>
+                <_shifting>
+                  <_shifting_type>Duration</_shifting_type>
+                </_shifting>
+                <_context_data_analysis>
+                  <probes>
+                    <probe>
+                      <id>produce</id>
+                      <source>batch</source>
+                      <extractor_type>intrinsic</extractor_type>
+                      <extractor_code>values = Stream.new('produce')
+    %w{order_id order_item qr}.each do |e|
+      sp = StreamPoint.new(e)
+      sp.value = data.send(e)
+      values &lt;&lt; sp
+    end
+    values</extractor_code>
+                      <extractor_url/>
+                      <extractor_params/>
+                      <visualizer_url/>
+                      <visualizer_params/>
+                    </probe>
+                  </probes>
+                  <ips/>
+                </_context_data_analysis>
+                <report>
+                  <url/>
+                </report>
+                <_notes>
+                  <_notes_general/>
+                </_notes>
+              </annotations>
+              <documentation>
+                <input/>
+                <output/>
+                <implementation>
+                  <description/>
+                </implementation>
+              </documentation>
+            </call>
+            <call id="a10" endpoint="ipc_receive">
+              <parameters>
+                <label>Wait for MT45 Takeout</label>
+                <arguments>
+                  <id>mt45takenout</id>
+                  <ttl>0</ttl>
+                  <delete>true</delete>
+                </arguments>
+              </parameters>
+              <annotations>
+                <_timing>
+                  <_timing_weight/>
+                  <_timing_avg>1</_timing_avg>
+                  <explanations/>
+                </_timing>
+                <_shifting>
+                  <_shifting_type>Duration</_shifting_type>
+                </_shifting>
+                <_context_data_analysis>
+                  <probes/>
+                  <ips/>
+                </_context_data_analysis>
+                <report>
+                  <url/>
+                </report>
+                <_notes>
+                  <_notes_general/>
+                </_notes>
+              </annotations>
+              <documentation>
+                <input/>
+                <output/>
+                <implementation>
+                  <description/>
+                </implementation>
+              </documentation>
+            </call>
+          </alternative>
+          <otherwise>
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg>0</_probability_avg>
+            </_probability>
+          </otherwise>
+        </choose>
+      </loop>
+      <stop id="a2"/>
+    </description>
+  time:timestamp: '2023-04-28T09:19:19.544+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: qr
+    value: "*268MFA466*TZHZE 001"
+  - name: params
+    value:
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+  time:timestamp: '2023-04-28T16:57:40.005+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: params
+    value:
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+  time:timestamp: '2023-04-28T16:57:40.465+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  time:timestamp: '2023-04-28T16:57:40.834+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: description/change
+  cpee:description: |
+    <?xml version="1.0"?>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <manipulate id="a13" label="Get Order Details">data.order = {
+      "order1" =&gt; ["wr04","wr04","wr08","wr08","wr08"],
+      "order2" =&gt; ["wr04","wr04","wr08"]
+      "order2" =&gt; ["wr04","wr04","wr08", "wr08"]
+    }
+    data.qr = '*268MFA466*TZHZE 001'
+    data.params = [ [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.03,0.4], [0.03,0.4], [0.03,0.4], [0.03,0.4], [0.03,0.4] ]</manipulate>
+      <manipulate id="a12" label="Inititalize Batch">data.tray_positions = [[[-137.87,-178.0,199.0],[-137.27,-98.0,199.0],[-136.67,-18.0,199.0],[-136.07,62.0,199.0],[-135.47,142.0,199.0],[-134.87,222.0,199.0]],[[-87.87,-178.0,199.0],[-87.27,-98.0,199.0],[-86.67,-18.0,199.0],[-86.07,62.0,199.0],[-85.47,142.0,199.0],[-84.87,222.0,199.0]],[[-37.87,-178.0,199.0],[-37.27,-98.0,199.0],[-36.67,-18.0,199.0],[-36.07,62.0,199.0],[-35.47,142.0,199.0],[-34.87,222.0,199.0]],[[12.13,-178.0,199.0],[12.73,-98.0,199.0],[13.33,-18.0,199.0],[13.93,62.0,199.0],[14.53,142.0,199.0],[15.13,222.0,199.0]],[[62.13,-178.0,199.0],[62.73,-98.0,199.0],[63.33,-18.0,199.0],[63.93,62.0,199.0],[64.53,142.0,199.0],[65.13,222.0,199.0]],[[112.13,-178.0,199.0],[112.73,-98.0,199.0],[113.33,-18.0,199.0],[113.93,62.0,199.0],[114.53,142.0,199.0],[115.13,222.0,199.0]],[[162.13,-178.0,199.0],[162.73,-98.0,199.0],[163.33,-18.0,199.0],[163.93,62.0,199.0],[164.53,142.0,199.0],[165.13,222.0,199.0]],[[212.13,-178.0,199.0],[212.73,-98.0,199.0],[213.33,-18.0,199.0],[213.93,62.0,199.0],[214.53,142.0,199.0],[215.13,222.0,199.0]]]
+    data.trays = [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,0],[1,1],[1,2],[1,3],[1,4],[1,5],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[3,0],[3,1],[3,2],[3,3],[3,4],[3,5],[4,0],[4,1],[4,2],[4,3],[4,4],[4,5],[5,0],[5,1],[5,2],[5,3],[5,4],[5,5],[6,0],[6,1],[6,2],[6,3],[6,4],[6,5],[7,0],[7,1],[7,2],[7,3],[7,4],[7,5]]
+    data.initial = nil
+    data.order_list = data.order.map{|k,v| v.map{|e| [k,e]} }.flatten(1)
+    data.programs = {
+      "wr04" =&gt; "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF",
+      "wr08" =&gt; "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+    }
+
+    ### Shuffle parameters
+    data.seed = 1
+    data.params.shuffle!(random: Random.new(data.seed))</manipulate>
+      <loop mode="pre_test" condition="data.order_list.length &gt; 0">
+        <_probability>
+          <_probability_min/>
+          <_probability_max/>
+          <_probability_avg>23</_probability_avg>
+        </_probability>
+        <manipulate id="a7" label="Next QR, Order Item and Tray">data.qr.sub!(/ \d+$/," " + data.from.to_s.rjust(3,'0'))
+    data.order_id, data.order_item = data.order_list.shift
+    data.count ||= -1
+    data.count += 1
+    data.initial = data.initial.nil? ? true : false
+    data.current_tray = data.tray_positions.dig(*(data.trays[(data.count.to_i) % data.trays.count]))</manipulate>
+        <call id="a9" endpoint="start_url">
+          <parameters>
+            <label>Get Machine State Cancelled</label>
+            <method>:post</method>
+            <arguments>
+              <behavior>wait_running</behavior>
+              <url>https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml</url>
+              <init>
+                <check>/Plc/DB21.DBX35.4</check>
+              </init>
+              <endpoints/>
+              <attributes/>
+              <customization/>
+            </arguments>
+          </parameters>
+          <code>
+            <prepare/>
+            <finalize output="result">data.state = result['check_value'].to_s</finalize>
+            <update output="result"/>
+            <rescue output="result"/>
+          </code>
+          <annotations>
+            <_timing>
+              <_timing_weight/>
+              <_timing_avg>0.03</_timing_avg>
+              <explanations/>
+            </_timing>
+            <_shifting>
+              <_shifting_type>Duration</_shifting_type>
+            </_shifting>
+            <_context_data_analysis>
+              <probes/>
+              <ips/>
+            </_context_data_analysis>
+            <report>
+              <url/>
+            </report>
+            <_notes>
+              <_notes_general/>
+            </_notes>
+          </annotations>
+          <documentation>
+            <input/>
+            <output/>
+            <implementation>
+              <description/>
+            </implementation>
+            <code>
+              <description/>
+            </code>
+          </documentation>
+        </call>
+        <choose mode="exclusive">
+          <alternative condition="data.state == 'true' || data.state == true">
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg>100</_probability_avg>
+            </_probability>
+            <call id="a8" endpoint="start_url">
+              <parameters>
+                <label>Spawn Production</label>
+                <method>:post</method>
+                <arguments>
+                  <behavior>fork_running</behavior>
+                  <url>!'https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20' + data.order_item + '.xml'</url>
+                  <init>
+                    <qr>!data.qr</qr>
+                    <current_tray>!data.current_tray</current_tray>
+                    <initial>!data.initial</initial>
+                    <program_params>!(data.params[(data.count.to_i)%data.params.count] + [data.order_id.to_s + ': ' + data.order_item.to_s])</program_params>
+                    <program_patterns>["yyyy","xxxx","aaaa"]</program_patterns>
+                    <program_url>!data.programs[data.order_item]</program_url>
+                  </init>
+                  <endpoints/>
+                  <attributes/>
+                  <customization/>
+                </arguments>
+              </parameters>
+              <annotations>
+                <_timing>
+                  <_timing_weight/>
+                  <_timing_avg>0.01</_timing_avg>
+                  <explanations/>
+                </_timing>
+                <_shifting>
+                  <_shifting_type>Duration</_shifting_type>
+                </_shifting>
+                <_context_data_analysis>
+                  <probes>
+                    <probe>
+                      <id>produce</id>
+                      <source>batch</source>
+                      <extractor_type>intrinsic</extractor_type>
+                      <extractor_code>values = Stream.new('produce')
+    %w{order_id order_item qr}.each do |e|
+      sp = StreamPoint.new(e)
+      sp.value = data.send(e)
+      values &lt;&lt; sp
+    end
+    values</extractor_code>
+                      <extractor_url/>
+                      <extractor_params/>
+                      <visualizer_url/>
+                      <visualizer_params/>
+                    </probe>
+                  </probes>
+                  <ips/>
+                </_context_data_analysis>
+                <report>
+                  <url/>
+                </report>
+                <_notes>
+                  <_notes_general/>
+                </_notes>
+              </annotations>
+              <documentation>
+                <input/>
+                <output/>
+                <implementation>
+                  <description/>
+                </implementation>
+              </documentation>
+            </call>
+            <call id="a10" endpoint="ipc_receive">
+              <parameters>
+                <label>Wait for MT45 Takeout</label>
+                <arguments>
+                  <id>mt45takenout</id>
+                  <ttl>0</ttl>
+                  <delete>true</delete>
+                </arguments>
+              </parameters>
+              <annotations>
+                <_timing>
+                  <_timing_weight/>
+                  <_timing_avg>1</_timing_avg>
+                  <explanations/>
+                </_timing>
+                <_shifting>
+                  <_shifting_type>Duration</_shifting_type>
+                </_shifting>
+                <_context_data_analysis>
+                  <probes/>
+                  <ips/>
+                </_context_data_analysis>
+                <report>
+                  <url/>
+                </report>
+                <_notes>
+                  <_notes_general/>
+                </_notes>
+              </annotations>
+              <documentation>
+                <input/>
+                <output/>
+                <implementation>
+                  <description/>
+                </implementation>
+              </documentation>
+            </call>
+          </alternative>
+          <otherwise>
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg>0</_probability_avg>
+            </_probability>
+          </otherwise>
+        </choose>
+      </loop>
+      <stop id="a2"/>
+    </description>
+  time:timestamp: '2023-04-28T16:58:11.244+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: description/change
+  cpee:description: |
+    <?xml version="1.0"?>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <manipulate id="a13" label="Get Order Details">data.order = {
+      "order1" =&gt; ["wr04","wr04","wr08","wr08","wr08"],
+      "order2" =&gt; ["wr04","wr04","wr08"],
+      "order2" =&gt; ["wr04","wr04","wr08", "wr08"]
+    }
+    data.qr = '*268MFA466*TZHZE 001'
+    data.params = [ [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.03,0.4], [0.03,0.4], [0.03,0.4], [0.03,0.4], [0.03,0.4] ]</manipulate>
+      <manipulate id="a12" label="Inititalize Batch">data.tray_positions = [[[-137.87,-178.0,199.0],[-137.27,-98.0,199.0],[-136.67,-18.0,199.0],[-136.07,62.0,199.0],[-135.47,142.0,199.0],[-134.87,222.0,199.0]],[[-87.87,-178.0,199.0],[-87.27,-98.0,199.0],[-86.67,-18.0,199.0],[-86.07,62.0,199.0],[-85.47,142.0,199.0],[-84.87,222.0,199.0]],[[-37.87,-178.0,199.0],[-37.27,-98.0,199.0],[-36.67,-18.0,199.0],[-36.07,62.0,199.0],[-35.47,142.0,199.0],[-34.87,222.0,199.0]],[[12.13,-178.0,199.0],[12.73,-98.0,199.0],[13.33,-18.0,199.0],[13.93,62.0,199.0],[14.53,142.0,199.0],[15.13,222.0,199.0]],[[62.13,-178.0,199.0],[62.73,-98.0,199.0],[63.33,-18.0,199.0],[63.93,62.0,199.0],[64.53,142.0,199.0],[65.13,222.0,199.0]],[[112.13,-178.0,199.0],[112.73,-98.0,199.0],[113.33,-18.0,199.0],[113.93,62.0,199.0],[114.53,142.0,199.0],[115.13,222.0,199.0]],[[162.13,-178.0,199.0],[162.73,-98.0,199.0],[163.33,-18.0,199.0],[163.93,62.0,199.0],[164.53,142.0,199.0],[165.13,222.0,199.0]],[[212.13,-178.0,199.0],[212.73,-98.0,199.0],[213.33,-18.0,199.0],[213.93,62.0,199.0],[214.53,142.0,199.0],[215.13,222.0,199.0]]]
+    data.trays = [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,0],[1,1],[1,2],[1,3],[1,4],[1,5],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[3,0],[3,1],[3,2],[3,3],[3,4],[3,5],[4,0],[4,1],[4,2],[4,3],[4,4],[4,5],[5,0],[5,1],[5,2],[5,3],[5,4],[5,5],[6,0],[6,1],[6,2],[6,3],[6,4],[6,5],[7,0],[7,1],[7,2],[7,3],[7,4],[7,5]]
+    data.initial = nil
+    data.order_list = data.order.map{|k,v| v.map{|e| [k,e]} }.flatten(1)
+    data.programs = {
+      "wr04" =&gt; "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF",
+      "wr08" =&gt; "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+    }
+
+    ### Shuffle parameters
+    data.seed = 1
+    data.params.shuffle!(random: Random.new(data.seed))</manipulate>
+      <loop mode="pre_test" condition="data.order_list.length &gt; 0">
+        <_probability>
+          <_probability_min/>
+          <_probability_max/>
+          <_probability_avg>23</_probability_avg>
+        </_probability>
+        <manipulate id="a7" label="Next QR, Order Item and Tray">data.qr.sub!(/ \d+$/," " + data.from.to_s.rjust(3,'0'))
+    data.order_id, data.order_item = data.order_list.shift
+    data.count ||= -1
+    data.count += 1
+    data.initial = data.initial.nil? ? true : false
+    data.current_tray = data.tray_positions.dig(*(data.trays[(data.count.to_i) % data.trays.count]))</manipulate>
+        <call id="a9" endpoint="start_url">
+          <parameters>
+            <label>Get Machine State Cancelled</label>
+            <method>:post</method>
+            <arguments>
+              <behavior>wait_running</behavior>
+              <url>https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml</url>
+              <init>
+                <check>/Plc/DB21.DBX35.4</check>
+              </init>
+              <endpoints/>
+              <attributes/>
+              <customization/>
+            </arguments>
+          </parameters>
+          <code>
+            <prepare/>
+            <finalize output="result">data.state = result['check_value'].to_s</finalize>
+            <update output="result"/>
+            <rescue output="result"/>
+          </code>
+          <annotations>
+            <_timing>
+              <_timing_weight/>
+              <_timing_avg>0.03</_timing_avg>
+              <explanations/>
+            </_timing>
+            <_shifting>
+              <_shifting_type>Duration</_shifting_type>
+            </_shifting>
+            <_context_data_analysis>
+              <probes/>
+              <ips/>
+            </_context_data_analysis>
+            <report>
+              <url/>
+            </report>
+            <_notes>
+              <_notes_general/>
+            </_notes>
+          </annotations>
+          <documentation>
+            <input/>
+            <output/>
+            <implementation>
+              <description/>
+            </implementation>
+            <code>
+              <description/>
+            </code>
+          </documentation>
+        </call>
+        <choose mode="exclusive">
+          <alternative condition="data.state == 'true' || data.state == true">
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg>100</_probability_avg>
+            </_probability>
+            <call id="a8" endpoint="start_url">
+              <parameters>
+                <label>Spawn Production</label>
+                <method>:post</method>
+                <arguments>
+                  <behavior>fork_running</behavior>
+                  <url>!'https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20' + data.order_item + '.xml'</url>
+                  <init>
+                    <qr>!data.qr</qr>
+                    <current_tray>!data.current_tray</current_tray>
+                    <initial>!data.initial</initial>
+                    <program_params>!(data.params[(data.count.to_i)%data.params.count] + [data.order_id.to_s + ': ' + data.order_item.to_s])</program_params>
+                    <program_patterns>["yyyy","xxxx","aaaa"]</program_patterns>
+                    <program_url>!data.programs[data.order_item]</program_url>
+                  </init>
+                  <endpoints/>
+                  <attributes/>
+                  <customization/>
+                </arguments>
+              </parameters>
+              <annotations>
+                <_timing>
+                  <_timing_weight/>
+                  <_timing_avg>0.01</_timing_avg>
+                  <explanations/>
+                </_timing>
+                <_shifting>
+                  <_shifting_type>Duration</_shifting_type>
+                </_shifting>
+                <_context_data_analysis>
+                  <probes>
+                    <probe>
+                      <id>produce</id>
+                      <source>batch</source>
+                      <extractor_type>intrinsic</extractor_type>
+                      <extractor_code>values = Stream.new('produce')
+    %w{order_id order_item qr}.each do |e|
+      sp = StreamPoint.new(e)
+      sp.value = data.send(e)
+      values &lt;&lt; sp
+    end
+    values</extractor_code>
+                      <extractor_url/>
+                      <extractor_params/>
+                      <visualizer_url/>
+                      <visualizer_params/>
+                    </probe>
+                  </probes>
+                  <ips/>
+                </_context_data_analysis>
+                <report>
+                  <url/>
+                </report>
+                <_notes>
+                  <_notes_general/>
+                </_notes>
+              </annotations>
+              <documentation>
+                <input/>
+                <output/>
+                <implementation>
+                  <description/>
+                </implementation>
+              </documentation>
+            </call>
+            <call id="a10" endpoint="ipc_receive">
+              <parameters>
+                <label>Wait for MT45 Takeout</label>
+                <arguments>
+                  <id>mt45takenout</id>
+                  <ttl>0</ttl>
+                  <delete>true</delete>
+                </arguments>
+              </parameters>
+              <annotations>
+                <_timing>
+                  <_timing_weight/>
+                  <_timing_avg>1</_timing_avg>
+                  <explanations/>
+                </_timing>
+                <_shifting>
+                  <_shifting_type>Duration</_shifting_type>
+                </_shifting>
+                <_context_data_analysis>
+                  <probes/>
+                  <ips/>
+                </_context_data_analysis>
+                <report>
+                  <url/>
+                </report>
+                <_notes>
+                  <_notes_general/>
+                </_notes>
+              </annotations>
+              <documentation>
+                <input/>
+                <output/>
+                <implementation>
+                  <description/>
+                </implementation>
+              </documentation>
+            </call>
+          </alternative>
+          <otherwise>
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg>0</_probability_avg>
+            </_probability>
+          </otherwise>
+        </choose>
+      </loop>
+      <stop id="a2"/>
+    </description>
+  time:timestamp: '2023-04-28T16:58:14.371+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: description/change
+  cpee:description: |
+    <?xml version="1.0"?>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <manipulate id="a13" label="Get Order Details">data.order = {
+      "order1" =&gt; ["wr04","wr04","wr08","wr08","wr08"],
+      "order2" =&gt; ["wr04","wr04","wr08"],
+      "order2" =&gt; ["wr04","wr08","wr08", "wr08"]
+    }
+    data.qr = '*268MFA466*TZHZE 001'
+    data.params = [ [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.03,0.4], [0.03,0.4], [0.03,0.4], [0.03,0.4], [0.03,0.4] ]</manipulate>
+      <manipulate id="a12" label="Inititalize Batch">data.tray_positions = [[[-137.87,-178.0,199.0],[-137.27,-98.0,199.0],[-136.67,-18.0,199.0],[-136.07,62.0,199.0],[-135.47,142.0,199.0],[-134.87,222.0,199.0]],[[-87.87,-178.0,199.0],[-87.27,-98.0,199.0],[-86.67,-18.0,199.0],[-86.07,62.0,199.0],[-85.47,142.0,199.0],[-84.87,222.0,199.0]],[[-37.87,-178.0,199.0],[-37.27,-98.0,199.0],[-36.67,-18.0,199.0],[-36.07,62.0,199.0],[-35.47,142.0,199.0],[-34.87,222.0,199.0]],[[12.13,-178.0,199.0],[12.73,-98.0,199.0],[13.33,-18.0,199.0],[13.93,62.0,199.0],[14.53,142.0,199.0],[15.13,222.0,199.0]],[[62.13,-178.0,199.0],[62.73,-98.0,199.0],[63.33,-18.0,199.0],[63.93,62.0,199.0],[64.53,142.0,199.0],[65.13,222.0,199.0]],[[112.13,-178.0,199.0],[112.73,-98.0,199.0],[113.33,-18.0,199.0],[113.93,62.0,199.0],[114.53,142.0,199.0],[115.13,222.0,199.0]],[[162.13,-178.0,199.0],[162.73,-98.0,199.0],[163.33,-18.0,199.0],[163.93,62.0,199.0],[164.53,142.0,199.0],[165.13,222.0,199.0]],[[212.13,-178.0,199.0],[212.73,-98.0,199.0],[213.33,-18.0,199.0],[213.93,62.0,199.0],[214.53,142.0,199.0],[215.13,222.0,199.0]]]
+    data.trays = [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,0],[1,1],[1,2],[1,3],[1,4],[1,5],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[3,0],[3,1],[3,2],[3,3],[3,4],[3,5],[4,0],[4,1],[4,2],[4,3],[4,4],[4,5],[5,0],[5,1],[5,2],[5,3],[5,4],[5,5],[6,0],[6,1],[6,2],[6,3],[6,4],[6,5],[7,0],[7,1],[7,2],[7,3],[7,4],[7,5]]
+    data.initial = nil
+    data.order_list = data.order.map{|k,v| v.map{|e| [k,e]} }.flatten(1)
+    data.programs = {
+      "wr04" =&gt; "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF",
+      "wr08" =&gt; "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+    }
+
+    ### Shuffle parameters
+    data.seed = 1
+    data.params.shuffle!(random: Random.new(data.seed))</manipulate>
+      <loop mode="pre_test" condition="data.order_list.length &gt; 0">
+        <_probability>
+          <_probability_min/>
+          <_probability_max/>
+          <_probability_avg>23</_probability_avg>
+        </_probability>
+        <manipulate id="a7" label="Next QR, Order Item and Tray">data.qr.sub!(/ \d+$/," " + data.from.to_s.rjust(3,'0'))
+    data.order_id, data.order_item = data.order_list.shift
+    data.count ||= -1
+    data.count += 1
+    data.initial = data.initial.nil? ? true : false
+    data.current_tray = data.tray_positions.dig(*(data.trays[(data.count.to_i) % data.trays.count]))</manipulate>
+        <call id="a9" endpoint="start_url">
+          <parameters>
+            <label>Get Machine State Cancelled</label>
+            <method>:post</method>
+            <arguments>
+              <behavior>wait_running</behavior>
+              <url>https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml</url>
+              <init>
+                <check>/Plc/DB21.DBX35.4</check>
+              </init>
+              <endpoints/>
+              <attributes/>
+              <customization/>
+            </arguments>
+          </parameters>
+          <code>
+            <prepare/>
+            <finalize output="result">data.state = result['check_value'].to_s</finalize>
+            <update output="result"/>
+            <rescue output="result"/>
+          </code>
+          <annotations>
+            <_timing>
+              <_timing_weight/>
+              <_timing_avg>0.03</_timing_avg>
+              <explanations/>
+            </_timing>
+            <_shifting>
+              <_shifting_type>Duration</_shifting_type>
+            </_shifting>
+            <_context_data_analysis>
+              <probes/>
+              <ips/>
+            </_context_data_analysis>
+            <report>
+              <url/>
+            </report>
+            <_notes>
+              <_notes_general/>
+            </_notes>
+          </annotations>
+          <documentation>
+            <input/>
+            <output/>
+            <implementation>
+              <description/>
+            </implementation>
+            <code>
+              <description/>
+            </code>
+          </documentation>
+        </call>
+        <choose mode="exclusive">
+          <alternative condition="data.state == 'true' || data.state == true">
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg>100</_probability_avg>
+            </_probability>
+            <call id="a8" endpoint="start_url">
+              <parameters>
+                <label>Spawn Production</label>
+                <method>:post</method>
+                <arguments>
+                  <behavior>fork_running</behavior>
+                  <url>!'https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20' + data.order_item + '.xml'</url>
+                  <init>
+                    <qr>!data.qr</qr>
+                    <current_tray>!data.current_tray</current_tray>
+                    <initial>!data.initial</initial>
+                    <program_params>!(data.params[(data.count.to_i)%data.params.count] + [data.order_id.to_s + ': ' + data.order_item.to_s])</program_params>
+                    <program_patterns>["yyyy","xxxx","aaaa"]</program_patterns>
+                    <program_url>!data.programs[data.order_item]</program_url>
+                  </init>
+                  <endpoints/>
+                  <attributes/>
+                  <customization/>
+                </arguments>
+              </parameters>
+              <annotations>
+                <_timing>
+                  <_timing_weight/>
+                  <_timing_avg>0.01</_timing_avg>
+                  <explanations/>
+                </_timing>
+                <_shifting>
+                  <_shifting_type>Duration</_shifting_type>
+                </_shifting>
+                <_context_data_analysis>
+                  <probes>
+                    <probe>
+                      <id>produce</id>
+                      <source>batch</source>
+                      <extractor_type>intrinsic</extractor_type>
+                      <extractor_code>values = Stream.new('produce')
+    %w{order_id order_item qr}.each do |e|
+      sp = StreamPoint.new(e)
+      sp.value = data.send(e)
+      values &lt;&lt; sp
+    end
+    values</extractor_code>
+                      <extractor_url/>
+                      <extractor_params/>
+                      <visualizer_url/>
+                      <visualizer_params/>
+                    </probe>
+                  </probes>
+                  <ips/>
+                </_context_data_analysis>
+                <report>
+                  <url/>
+                </report>
+                <_notes>
+                  <_notes_general/>
+                </_notes>
+              </annotations>
+              <documentation>
+                <input/>
+                <output/>
+                <implementation>
+                  <description/>
+                </implementation>
+              </documentation>
+            </call>
+            <call id="a10" endpoint="ipc_receive">
+              <parameters>
+                <label>Wait for MT45 Takeout</label>
+                <arguments>
+                  <id>mt45takenout</id>
+                  <ttl>0</ttl>
+                  <delete>true</delete>
+                </arguments>
+              </parameters>
+              <annotations>
+                <_timing>
+                  <_timing_weight/>
+                  <_timing_avg>1</_timing_avg>
+                  <explanations/>
+                </_timing>
+                <_shifting>
+                  <_shifting_type>Duration</_shifting_type>
+                </_shifting>
+                <_context_data_analysis>
+                  <probes/>
+                  <ips/>
+                </_context_data_analysis>
+                <report>
+                  <url/>
+                </report>
+                <_notes>
+                  <_notes_general/>
+                </_notes>
+              </annotations>
+              <documentation>
+                <input/>
+                <output/>
+                <implementation>
+                  <description/>
+                </implementation>
+              </documentation>
+            </call>
+          </alternative>
+          <otherwise>
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg>0</_probability_avg>
+            </_probability>
+          </otherwise>
+        </choose>
+      </loop>
+      <stop id="a2"/>
+    </description>
+  time:timestamp: '2023-04-28T16:58:52.069+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: description/change
+  cpee:description: |
+    <?xml version="1.0"?>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <manipulate id="a13" label="Get Order Details">data.order = {
+      "order1" =&gt; ["wr04","wr04","wr08","wr08","wr08"],
+      "order2" =&gt; ["wr04","wr04","wr08"],
+      "order2" =&gt; ["wr08","wr08","wr08", "wr08"]
+    }
+    data.qr = '*268MFA466*TZHZE 001'
+    data.params = [ [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.03,0.6], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.2], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.07,0.4], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.03,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.2], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.05,0.6], [0.03,0.4], [0.03,0.4], [0.03,0.4], [0.03,0.4], [0.03,0.4] ]</manipulate>
+      <manipulate id="a12" label="Inititalize Batch">data.tray_positions = [[[-137.87,-178.0,199.0],[-137.27,-98.0,199.0],[-136.67,-18.0,199.0],[-136.07,62.0,199.0],[-135.47,142.0,199.0],[-134.87,222.0,199.0]],[[-87.87,-178.0,199.0],[-87.27,-98.0,199.0],[-86.67,-18.0,199.0],[-86.07,62.0,199.0],[-85.47,142.0,199.0],[-84.87,222.0,199.0]],[[-37.87,-178.0,199.0],[-37.27,-98.0,199.0],[-36.67,-18.0,199.0],[-36.07,62.0,199.0],[-35.47,142.0,199.0],[-34.87,222.0,199.0]],[[12.13,-178.0,199.0],[12.73,-98.0,199.0],[13.33,-18.0,199.0],[13.93,62.0,199.0],[14.53,142.0,199.0],[15.13,222.0,199.0]],[[62.13,-178.0,199.0],[62.73,-98.0,199.0],[63.33,-18.0,199.0],[63.93,62.0,199.0],[64.53,142.0,199.0],[65.13,222.0,199.0]],[[112.13,-178.0,199.0],[112.73,-98.0,199.0],[113.33,-18.0,199.0],[113.93,62.0,199.0],[114.53,142.0,199.0],[115.13,222.0,199.0]],[[162.13,-178.0,199.0],[162.73,-98.0,199.0],[163.33,-18.0,199.0],[163.93,62.0,199.0],[164.53,142.0,199.0],[165.13,222.0,199.0]],[[212.13,-178.0,199.0],[212.73,-98.0,199.0],[213.33,-18.0,199.0],[213.93,62.0,199.0],[214.53,142.0,199.0],[215.13,222.0,199.0]]]
+    data.trays = [[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,0],[1,1],[1,2],[1,3],[1,4],[1,5],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[3,0],[3,1],[3,2],[3,3],[3,4],[3,5],[4,0],[4,1],[4,2],[4,3],[4,4],[4,5],[5,0],[5,1],[5,2],[5,3],[5,4],[5,5],[6,0],[6,1],[6,2],[6,3],[6,4],[6,5],[7,0],[7,1],[7,2],[7,3],[7,4],[7,5]]
+    data.initial = nil
+    data.order_list = data.order.map{|k,v| v.map{|e| [k,e]} }.flatten(1)
+    data.programs = {
+      "wr04" =&gt; "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF",
+      "wr08" =&gt; "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+    }
+
+    ### Shuffle parameters
+    data.seed = 1
+    data.params.shuffle!(random: Random.new(data.seed))</manipulate>
+      <loop mode="pre_test" condition="data.order_list.length &gt; 0">
+        <_probability>
+          <_probability_min/>
+          <_probability_max/>
+          <_probability_avg>23</_probability_avg>
+        </_probability>
+        <manipulate id="a7" label="Next QR, Order Item and Tray">data.qr.sub!(/ \d+$/," " + data.from.to_s.rjust(3,'0'))
+    data.order_id, data.order_item = data.order_list.shift
+    data.count ||= -1
+    data.count += 1
+    data.initial = data.initial.nil? ? true : false
+    data.current_tray = data.tray_positions.dig(*(data.trays[(data.count.to_i) % data.trays.count]))</manipulate>
+        <call id="a9" endpoint="start_url">
+          <parameters>
+            <label>Get Machine State Cancelled</label>
+            <method>:post</method>
+            <arguments>
+              <behavior>wait_running</behavior>
+              <url>https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml</url>
+              <init>
+                <check>/Plc/DB21.DBX35.4</check>
+              </init>
+              <endpoints/>
+              <attributes/>
+              <customization/>
+            </arguments>
+          </parameters>
+          <code>
+            <prepare/>
+            <finalize output="result">data.state = result['check_value'].to_s</finalize>
+            <update output="result"/>
+            <rescue output="result"/>
+          </code>
+          <annotations>
+            <_timing>
+              <_timing_weight/>
+              <_timing_avg>0.03</_timing_avg>
+              <explanations/>
+            </_timing>
+            <_shifting>
+              <_shifting_type>Duration</_shifting_type>
+            </_shifting>
+            <_context_data_analysis>
+              <probes/>
+              <ips/>
+            </_context_data_analysis>
+            <report>
+              <url/>
+            </report>
+            <_notes>
+              <_notes_general/>
+            </_notes>
+          </annotations>
+          <documentation>
+            <input/>
+            <output/>
+            <implementation>
+              <description/>
+            </implementation>
+            <code>
+              <description/>
+            </code>
+          </documentation>
+        </call>
+        <choose mode="exclusive">
+          <alternative condition="data.state == 'true' || data.state == true">
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg>100</_probability_avg>
+            </_probability>
+            <call id="a8" endpoint="start_url">
+              <parameters>
+                <label>Spawn Production</label>
+                <method>:post</method>
+                <arguments>
+                  <behavior>fork_running</behavior>
+                  <url>!'https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20' + data.order_item + '.xml'</url>
+                  <init>
+                    <qr>!data.qr</qr>
+                    <current_tray>!data.current_tray</current_tray>
+                    <initial>!data.initial</initial>
+                    <program_params>!(data.params[(data.count.to_i)%data.params.count] + [data.order_id.to_s + ': ' + data.order_item.to_s])</program_params>
+                    <program_patterns>["yyyy","xxxx","aaaa"]</program_patterns>
+                    <program_url>!data.programs[data.order_item]</program_url>
+                  </init>
+                  <endpoints/>
+                  <attributes/>
+                  <customization/>
+                </arguments>
+              </parameters>
+              <annotations>
+                <_timing>
+                  <_timing_weight/>
+                  <_timing_avg>0.01</_timing_avg>
+                  <explanations/>
+                </_timing>
+                <_shifting>
+                  <_shifting_type>Duration</_shifting_type>
+                </_shifting>
+                <_context_data_analysis>
+                  <probes>
+                    <probe>
+                      <id>produce</id>
+                      <source>batch</source>
+                      <extractor_type>intrinsic</extractor_type>
+                      <extractor_code>values = Stream.new('produce')
+    %w{order_id order_item qr}.each do |e|
+      sp = StreamPoint.new(e)
+      sp.value = data.send(e)
+      values &lt;&lt; sp
+    end
+    values</extractor_code>
+                      <extractor_url/>
+                      <extractor_params/>
+                      <visualizer_url/>
+                      <visualizer_params/>
+                    </probe>
+                  </probes>
+                  <ips/>
+                </_context_data_analysis>
+                <report>
+                  <url/>
+                </report>
+                <_notes>
+                  <_notes_general/>
+                </_notes>
+              </annotations>
+              <documentation>
+                <input/>
+                <output/>
+                <implementation>
+                  <description/>
+                </implementation>
+              </documentation>
+            </call>
+            <call id="a10" endpoint="ipc_receive">
+              <parameters>
+                <label>Wait for MT45 Takeout</label>
+                <arguments>
+                  <id>mt45takenout</id>
+                  <ttl>0</ttl>
+                  <delete>true</delete>
+                </arguments>
+              </parameters>
+              <annotations>
+                <_timing>
+                  <_timing_weight/>
+                  <_timing_avg>1</_timing_avg>
+                  <explanations/>
+                </_timing>
+                <_shifting>
+                  <_shifting_type>Duration</_shifting_type>
+                </_shifting>
+                <_context_data_analysis>
+                  <probes/>
+                  <ips/>
+                </_context_data_analysis>
+                <report>
+                  <url/>
+                </report>
+                <_notes>
+                  <_notes_general/>
+                </_notes>
+              </annotations>
+              <documentation>
+                <input/>
+                <output/>
+                <implementation>
+                  <description/>
+                </implementation>
+              </documentation>
+            </call>
+          </alternative>
+          <otherwise>
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg>0</_probability_avg>
+            </_probability>
+          </otherwise>
+        </choose>
+      </loop>
+      <stop id="a2"/>
+    </description>
+  time:timestamp: '2023-04-28T16:58:56.661+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: running
+  time:timestamp: '2023-04-28T16:59:38.232+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Order Details
+  id:id: a13
+  cpee:activity: a13
+  cpee:activity_uuid: 3c60bfe7baf7a6d20d136faae7df32b2
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order
+    value:
+      order1:
+      - wr04
+      - wr04
+      - wr08
+      - wr08
+      - wr08
+      order2:
+      - wr08
+      - wr08
+      - wr08
+      - wr08
+  - name: qr
+    value: "*268MFA466*TZHZE 001"
+  - name: params
+    value:
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.4
+  time:timestamp: '2023-04-28T16:59:38.234+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Inititalize Batch
+  id:id: a12
+  cpee:activity: a12
+  cpee:activity_uuid: ce58bca5ceb615270b51bc1cf50b18b5
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: tray_positions
+    value:
+    - - - -137.87
+        - -178.0
+        - 199.0
+      - - -137.27
+        - -98.0
+        - 199.0
+      - - -136.67
+        - -18.0
+        - 199.0
+      - - -136.07
+        - 62.0
+        - 199.0
+      - - -135.47
+        - 142.0
+        - 199.0
+      - - -134.87
+        - 222.0
+        - 199.0
+    - - - -87.87
+        - -178.0
+        - 199.0
+      - - -87.27
+        - -98.0
+        - 199.0
+      - - -86.67
+        - -18.0
+        - 199.0
+      - - -86.07
+        - 62.0
+        - 199.0
+      - - -85.47
+        - 142.0
+        - 199.0
+      - - -84.87
+        - 222.0
+        - 199.0
+    - - - -37.87
+        - -178.0
+        - 199.0
+      - - -37.27
+        - -98.0
+        - 199.0
+      - - -36.67
+        - -18.0
+        - 199.0
+      - - -36.07
+        - 62.0
+        - 199.0
+      - - -35.47
+        - 142.0
+        - 199.0
+      - - -34.87
+        - 222.0
+        - 199.0
+    - - - 12.13
+        - -178.0
+        - 199.0
+      - - 12.73
+        - -98.0
+        - 199.0
+      - - 13.33
+        - -18.0
+        - 199.0
+      - - 13.93
+        - 62.0
+        - 199.0
+      - - 14.53
+        - 142.0
+        - 199.0
+      - - 15.13
+        - 222.0
+        - 199.0
+    - - - 62.13
+        - -178.0
+        - 199.0
+      - - 62.73
+        - -98.0
+        - 199.0
+      - - 63.33
+        - -18.0
+        - 199.0
+      - - 63.93
+        - 62.0
+        - 199.0
+      - - 64.53
+        - 142.0
+        - 199.0
+      - - 65.13
+        - 222.0
+        - 199.0
+    - - - 112.13
+        - -178.0
+        - 199.0
+      - - 112.73
+        - -98.0
+        - 199.0
+      - - 113.33
+        - -18.0
+        - 199.0
+      - - 113.93
+        - 62.0
+        - 199.0
+      - - 114.53
+        - 142.0
+        - 199.0
+      - - 115.13
+        - 222.0
+        - 199.0
+    - - - 162.13
+        - -178.0
+        - 199.0
+      - - 162.73
+        - -98.0
+        - 199.0
+      - - 163.33
+        - -18.0
+        - 199.0
+      - - 163.93
+        - 62.0
+        - 199.0
+      - - 164.53
+        - 142.0
+        - 199.0
+      - - 165.13
+        - 222.0
+        - 199.0
+    - - - 212.13
+        - -178.0
+        - 199.0
+      - - 212.73
+        - -98.0
+        - 199.0
+      - - 213.33
+        - -18.0
+        - 199.0
+      - - 213.93
+        - 62.0
+        - 199.0
+      - - 214.53
+        - 142.0
+        - 199.0
+      - - 215.13
+        - 222.0
+        - 199.0
+  - name: trays
+    value:
+    - - 0
+      - 0
+    - - 0
+      - 1
+    - - 0
+      - 2
+    - - 0
+      - 3
+    - - 0
+      - 4
+    - - 0
+      - 5
+    - - 1
+      - 0
+    - - 1
+      - 1
+    - - 1
+      - 2
+    - - 1
+      - 3
+    - - 1
+      - 4
+    - - 1
+      - 5
+    - - 2
+      - 0
+    - - 2
+      - 1
+    - - 2
+      - 2
+    - - 2
+      - 3
+    - - 2
+      - 4
+    - - 2
+      - 5
+    - - 3
+      - 0
+    - - 3
+      - 1
+    - - 3
+      - 2
+    - - 3
+      - 3
+    - - 3
+      - 4
+    - - 3
+      - 5
+    - - 4
+      - 0
+    - - 4
+      - 1
+    - - 4
+      - 2
+    - - 4
+      - 3
+    - - 4
+      - 4
+    - - 4
+      - 5
+    - - 5
+      - 0
+    - - 5
+      - 1
+    - - 5
+      - 2
+    - - 5
+      - 3
+    - - 5
+      - 4
+    - - 5
+      - 5
+    - - 6
+      - 0
+    - - 6
+      - 1
+    - - 6
+      - 2
+    - - 6
+      - 3
+    - - 6
+      - 4
+    - - 6
+      - 5
+    - - 7
+      - 0
+    - - 7
+      - 1
+    - - 7
+      - 2
+    - - 7
+      - 3
+    - - 7
+      - 4
+    - - 7
+      - 5
+  - name: initial
+    value:
+  - name: order_list
+    value:
+    - - order1
+      - wr04
+    - - order1
+      - wr04
+    - - order1
+      - wr08
+    - - order1
+      - wr08
+    - - order1
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+  - name: programs
+    value:
+      wr04: https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF
+      wr08: https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF
+  - name: seed
+    value: 1
+  - name: params
+    value:
+    - - 0.03
+      - 0.6
+    - - 0.03
+      - 0.6
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.2
+    - - 0.03
+      - 0.4
+    - - 0.05
+      - 0.2
+    - - 0.05
+      - 0.6
+    - - 0.07
+      - 0.4
+    - - 0.05
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.05
+      - 0.6
+    - - 0.03
+      - 0.2
+    - - 0.03
+      - 0.2
+    - - 0.05
+      - 0.6
+    - - 0.05
+      - 0.6
+    - - 0.07
+      - 0.4
+    - - 0.03
+      - 0.2
+    - - 0.07
+      - 0.4
+    - - 0.03
+      - 0.2
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.4
+    - - 0.03
+      - 0.4
+    - - 0.03
+      - 0.6
+    - - 0.07
+      - 0.4
+    - - 0.03
+      - 0.6
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.2
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.4
+    - - 0.07
+      - 0.2
+    - - 0.03
+      - 0.4
+    - - 0.05
+      - 0.6
+  time:timestamp: '2023-04-28T16:59:38.238+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 186f08695ca2e28b9002ef2a72bc6ef7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order_id
+    value: order1
+  - name: order_item
+    value: wr04
+  - name: count
+    value: 0
+  - name: initial
+    value: true
+  - name: current_tray
+    value:
+    - -137.87
+    - -178.0
+    - 199.0
+  - name: qr
+    value: "*268MFA466*TZHZE 000"
+  - name: order_list
+    value:
+    - - order1
+      - wr04
+    - - order1
+      - wr08
+    - - order1
+      - wr08
+    - - order1
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+  time:timestamp: '2023-04-28T16:59:38.247+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 186f08695ca2e28b9002ef2a72bc6ef7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T16:59:38.247+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Inititalize Batch
+  id:id: a12
+  cpee:activity: a12
+  cpee:activity_uuid: ce58bca5ceb615270b51bc1cf50b18b5
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T16:59:38.239+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Order Details
+  id:id: a13
+  cpee:activity: a13
+  cpee:activity_uuid: 3c60bfe7baf7a6d20d136faae7df32b2
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T16:59:38.234+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 8277b3798bb904b2828c9d23db46ef48
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: wait_running
+  - name: url
+    value: https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml
+  - name: init
+    value: '{ "check": "/Plc/DB21.DBX35.4" }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T16:59:38.253+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 8277b3798bb904b2828c9d23db46ef48
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5564","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5564","CPEE-INSTANCE-UUID":"1ba78e0f-acfd-4fd5-a59a-da5b575abead","CPEE-BEHAVIOR":"wait_running"}'
+  time:timestamp: '2023-04-28T16:59:38.548+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 8277b3798bb904b2828c9d23db46ef48
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5564'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5564
+    CPEE-INSTANCE-UUID: 1ba78e0f-acfd-4fd5-a59a-da5b575abead
+    CPEE-BEHAVIOR: wait_running
+  time:timestamp: '2023-04-28T16:59:38.549+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 8277b3798bb904b2828c9d23db46ef48
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5564","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5564","CPEE-INSTANCE-UUID":"1ba78e0f-acfd-4fd5-a59a-da5b575abead","CPEE-STATE":"running"}'
+  time:timestamp: '2023-04-28T16:59:40.853+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 8277b3798bb904b2828c9d23db46ef48
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5564","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5564","CPEE-INSTANCE-UUID":"1ba78e0f-acfd-4fd5-a59a-da5b575abead","CPEE-STATE":"finished","check":"/Plc/DB21.DBX35.4","check_value":true}'
+  time:timestamp: '2023-04-28T16:59:41.416+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 8277b3798bb904b2828c9d23db46ef48
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: state
+    value: 'true'
+  time:timestamp: '2023-04-28T16:59:41.419+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 8277b3798bb904b2828c9d23db46ef48
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T16:59:41.420+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 5efd8cf75080c98809a15f3d2c7cc46a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: fork_running
+  - name: url
+    value: https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20wr04.xml
+  - name: init
+    value: '{ "qr": "*268MFA466*TZHZE 000", "current_tray": [-137.87,-178.0,199.0],
+      "initial": true, "program_params": [0.03,0.6,"order1: wr04"], "program_patterns":
+      "[\"yyyy\",\"xxxx\",\"aaaa\"]", "program_url": "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+      }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T16:59:41.424+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 5efd8cf75080c98809a15f3d2c7cc46a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5565'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5565
+    CPEE-INSTANCE-UUID: 14eb245e-9aba-446f-9624-2f110624dc65
+    CPEE-BEHAVIOR: fork_running
+  time:timestamp: '2023-04-28T16:59:41.938+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 5efd8cf75080c98809a15f3d2c7cc46a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T16:59:41.939+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 5efd8cf75080c98809a15f3d2c7cc46a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5565","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5565","CPEE-INSTANCE-UUID":"14eb245e-9aba-446f-9624-2f110624dc65","CPEE-BEHAVIOR":"fork_running"}'
+  time:timestamp: '2023-04-28T16:59:41.938+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 75b919815b20e2d2dd7cdfdf3a02dcb4
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: id
+    value: mt45takenout
+  - name: ttl
+    value: '0'
+  - name: delete
+    value: 'true'
+  time:timestamp: '2023-04-28T16:59:41.948+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 75b919815b20e2d2dd7cdfdf3a02dcb4
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: slotid
+    data: 148d8acd-2191-4882-a0d0-8f0ecdd9915d
+  time:timestamp: '2023-04-28T16:59:41.960+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 75b919815b20e2d2dd7cdfdf3a02dcb4
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: message
+    mimetype: application/json
+    data: '{"message":"ok","delivery":"source"}'
+  time:timestamp: '2023-04-28T17:03:51.233+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 75b919815b20e2d2dd7cdfdf3a02dcb4
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:51.235+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: d95ec9b983d3f243ae450f64960a762b
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:51.247+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a7cb7ba746ce6ca739c9dd5117663f1a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: wait_running
+  - name: url
+    value: https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml
+  - name: init
+    value: '{ "check": "/Plc/DB21.DBX35.4" }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:03:51.254+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: d95ec9b983d3f243ae450f64960a762b
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order_id
+    value: order1
+  - name: order_item
+    value: wr04
+  - name: count
+    value: 1
+  - name: initial
+    value: false
+  - name: current_tray
+    value:
+    - -137.27
+    - -98.0
+    - 199.0
+  - name: order_list
+    value:
+    - - order1
+      - wr08
+    - - order1
+      - wr08
+    - - order1
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+  time:timestamp: '2023-04-28T17:03:51.246+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a7cb7ba746ce6ca739c9dd5117663f1a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5586","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5586","CPEE-INSTANCE-UUID":"41d9a152-d54e-461a-80d6-1c696f42d1cf","CPEE-BEHAVIOR":"wait_running"}'
+  time:timestamp: '2023-04-28T17:03:51.511+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a7cb7ba746ce6ca739c9dd5117663f1a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5586'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5586
+    CPEE-INSTANCE-UUID: 41d9a152-d54e-461a-80d6-1c696f42d1cf
+    CPEE-BEHAVIOR: wait_running
+  time:timestamp: '2023-04-28T17:03:51.514+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a7cb7ba746ce6ca739c9dd5117663f1a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5586","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5586","CPEE-INSTANCE-UUID":"41d9a152-d54e-461a-80d6-1c696f42d1cf","CPEE-STATE":"running"}'
+  time:timestamp: '2023-04-28T17:03:56.489+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a7cb7ba746ce6ca739c9dd5117663f1a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5586","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5586","CPEE-INSTANCE-UUID":"41d9a152-d54e-461a-80d6-1c696f42d1cf","CPEE-STATE":"finished","check":"/Plc/DB21.DBX35.4","check_value":true}'
+  time:timestamp: '2023-04-28T17:03:57.280+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a7cb7ba746ce6ca739c9dd5117663f1a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: state
+    value: 'true'
+  time:timestamp: '2023-04-28T17:03:57.286+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a7cb7ba746ce6ca739c9dd5117663f1a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:57.286+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 36b7b040a7917523cc389c24b2c851ec
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: fork_running
+  - name: url
+    value: https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20wr04.xml
+  - name: init
+    value: '{ "qr": "*268MFA466*TZHZE 000", "current_tray": [-137.27,-98.0,199.0],
+      "initial": false, "program_params": [0.03,0.6,"order1: wr04"], "program_patterns":
+      "[\"yyyy\",\"xxxx\",\"aaaa\"]", "program_url": "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+      }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:03:57.296+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 36b7b040a7917523cc389c24b2c851ec
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5590'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5590
+    CPEE-INSTANCE-UUID: 1b85e63c-2607-45b7-bbeb-b8e78c76d02a
+    CPEE-BEHAVIOR: fork_running
+  time:timestamp: '2023-04-28T17:03:57.519+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 36b7b040a7917523cc389c24b2c851ec
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:03:57.522+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 36b7b040a7917523cc389c24b2c851ec
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5590","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5590","CPEE-INSTANCE-UUID":"1b85e63c-2607-45b7-bbeb-b8e78c76d02a","CPEE-BEHAVIOR":"fork_running"}'
+  time:timestamp: '2023-04-28T17:03:57.518+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 5f7a46aa74b93ab33aa3d059a4be072a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: id
+    value: mt45takenout
+  - name: ttl
+    value: '0'
+  - name: delete
+    value: 'true'
+  time:timestamp: '2023-04-28T17:03:57.530+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 5f7a46aa74b93ab33aa3d059a4be072a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: slotid
+    data: 6c4ea7a1-c965-415b-b5cb-68d3e94ec594
+  time:timestamp: '2023-04-28T17:03:57.538+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 38d186d46721e3233103d1960d02c56d
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:08:49.746+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 38d186d46721e3233103d1960d02c56d
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order_id
+    value: order1
+  - name: order_item
+    value: wr08
+  - name: count
+    value: 2
+  - name: initial
+    value: false
+  - name: current_tray
+    value:
+    - -136.67
+    - -18.0
+    - 199.0
+  - name: order_list
+    value:
+    - - order1
+      - wr08
+    - - order1
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+  time:timestamp: '2023-04-28T17:08:49.745+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 5f7a46aa74b93ab33aa3d059a4be072a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: message
+    mimetype: application/json
+    data: '{"message":"ok","delivery":"source"}'
+  time:timestamp: '2023-04-28T17:08:49.733+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 5f7a46aa74b93ab33aa3d059a4be072a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:08:49.738+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 25b8d1512aa98fd0874fc6a5a0018aa2
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: wait_running
+  - name: url
+    value: https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml
+  - name: init
+    value: '{ "check": "/Plc/DB21.DBX35.4" }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:08:49.757+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 25b8d1512aa98fd0874fc6a5a0018aa2
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5615","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5615","CPEE-INSTANCE-UUID":"9aa93873-85ff-4f72-b948-042389173182","CPEE-BEHAVIOR":"wait_running"}'
+  time:timestamp: '2023-04-28T17:08:50.022+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 25b8d1512aa98fd0874fc6a5a0018aa2
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5615'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5615
+    CPEE-INSTANCE-UUID: 9aa93873-85ff-4f72-b948-042389173182
+    CPEE-BEHAVIOR: wait_running
+  time:timestamp: '2023-04-28T17:08:50.023+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 25b8d1512aa98fd0874fc6a5a0018aa2
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5615","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5615","CPEE-INSTANCE-UUID":"9aa93873-85ff-4f72-b948-042389173182","CPEE-STATE":"running"}'
+  time:timestamp: '2023-04-28T17:08:54.144+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 25b8d1512aa98fd0874fc6a5a0018aa2
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5615","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5615","CPEE-INSTANCE-UUID":"9aa93873-85ff-4f72-b948-042389173182","CPEE-STATE":"finished","check":"/Plc/DB21.DBX35.4","check_value":true}'
+  time:timestamp: '2023-04-28T17:08:55.476+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 25b8d1512aa98fd0874fc6a5a0018aa2
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: state
+    value: 'true'
+  time:timestamp: '2023-04-28T17:08:55.485+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 25b8d1512aa98fd0874fc6a5a0018aa2
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:08:55.486+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 0c19de3e779a002af729badc59733de8
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: fork_running
+  - name: url
+    value: https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20wr08.xml
+  - name: init
+    value: '{ "qr": "*268MFA466*TZHZE 000", "current_tray": [-136.67,-18.0,199.0],
+      "initial": false, "program_params": [0.05,0.2,"order1: wr08"], "program_patterns":
+      "[\"yyyy\",\"xxxx\",\"aaaa\"]", "program_url": "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+      }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:08:55.506+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 0c19de3e779a002af729badc59733de8
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:08:55.925+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 0c19de3e779a002af729badc59733de8
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5619","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5619","CPEE-INSTANCE-UUID":"f5f01e70-e2dd-4fd9-bd77-5384126f951f","CPEE-BEHAVIOR":"fork_running"}'
+  time:timestamp: '2023-04-28T17:08:55.922+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 630e4ffa9598916041d4f2c16e576fb7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: id
+    value: mt45takenout
+  - name: ttl
+    value: '0'
+  - name: delete
+    value: 'true'
+  time:timestamp: '2023-04-28T17:08:55.930+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 630e4ffa9598916041d4f2c16e576fb7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: slotid
+    data: 22ec2749-2a7a-4511-a241-9a45bf38f21c
+  time:timestamp: '2023-04-28T17:08:55.939+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 0c19de3e779a002af729badc59733de8
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5619'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5619
+    CPEE-INSTANCE-UUID: f5f01e70-e2dd-4fd9-bd77-5384126f951f
+    CPEE-BEHAVIOR: fork_running
+  time:timestamp: '2023-04-28T17:08:55.924+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 630e4ffa9598916041d4f2c16e576fb7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: message
+    mimetype: application/json
+    data: '{"message":"ok","delivery":"source"}'
+  time:timestamp: '2023-04-28T17:13:30.605+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 630e4ffa9598916041d4f2c16e576fb7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:13:30.605+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ea9023897865ae6bf0a2678ef858d6ee
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: wait_running
+  - name: url
+    value: https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml
+  - name: init
+    value: '{ "check": "/Plc/DB21.DBX35.4" }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:13:30.645+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 0beb19b1eb245f7fdff2b73f48a125a1
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:13:30.632+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 0beb19b1eb245f7fdff2b73f48a125a1
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order_id
+    value: order1
+  - name: order_item
+    value: wr08
+  - name: count
+    value: 3
+  - name: initial
+    value: false
+  - name: current_tray
+    value:
+    - -136.07
+    - 62.0
+    - 199.0
+  - name: order_list
+    value:
+    - - order1
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+  time:timestamp: '2023-04-28T17:13:30.631+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ea9023897865ae6bf0a2678ef858d6ee
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5644","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5644","CPEE-INSTANCE-UUID":"efa1cfc5-a867-434f-8526-4d96009bb152","CPEE-BEHAVIOR":"wait_running"}'
+  time:timestamp: '2023-04-28T17:13:31.212+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ea9023897865ae6bf0a2678ef858d6ee
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5644'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5644
+    CPEE-INSTANCE-UUID: efa1cfc5-a867-434f-8526-4d96009bb152
+    CPEE-BEHAVIOR: wait_running
+  time:timestamp: '2023-04-28T17:13:31.214+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ea9023897865ae6bf0a2678ef858d6ee
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5644","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5644","CPEE-INSTANCE-UUID":"efa1cfc5-a867-434f-8526-4d96009bb152","CPEE-STATE":"running"}'
+  time:timestamp: '2023-04-28T17:13:34.036+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ea9023897865ae6bf0a2678ef858d6ee
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5644","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5644","CPEE-INSTANCE-UUID":"efa1cfc5-a867-434f-8526-4d96009bb152","CPEE-STATE":"finished","check":"/Plc/DB21.DBX35.4","check_value":true}'
+  time:timestamp: '2023-04-28T17:13:34.569+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ea9023897865ae6bf0a2678ef858d6ee
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:13:34.583+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ea9023897865ae6bf0a2678ef858d6ee
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: state
+    value: 'true'
+  time:timestamp: '2023-04-28T17:13:34.579+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: '093dca7a65a6c8658bfd7734d734a26d'
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: fork_running
+  - name: url
+    value: https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20wr08.xml
+  - name: init
+    value: '{ "qr": "*268MFA466*TZHZE 000", "current_tray": [-136.07,62.0,199.0],
+      "initial": false, "program_params": [0.05,0.6,"order1: wr08"], "program_patterns":
+      "[\"yyyy\",\"xxxx\",\"aaaa\"]", "program_url": "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+      }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:13:34.599+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: '093dca7a65a6c8658bfd7734d734a26d'
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:13:34.883+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: '093dca7a65a6c8658bfd7734d734a26d'
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5646'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5646
+    CPEE-INSTANCE-UUID: '095409b5-88b9-4175-bb00-8ee0900e0d7a'
+    CPEE-BEHAVIOR: fork_running
+  time:timestamp: '2023-04-28T17:13:34.882+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: '093dca7a65a6c8658bfd7734d734a26d'
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5646","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5646","CPEE-INSTANCE-UUID":"095409b5-88b9-4175-bb00-8ee0900e0d7a","CPEE-BEHAVIOR":"fork_running"}'
+  time:timestamp: '2023-04-28T17:13:34.882+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: d46a29437e0cd520abff5ac56ff058e8
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: id
+    value: mt45takenout
+  - name: ttl
+    value: '0'
+  - name: delete
+    value: 'true'
+  time:timestamp: '2023-04-28T17:13:34.891+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: d46a29437e0cd520abff5ac56ff058e8
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: slotid
+    data: 8d8a7118-b79b-47a0-ab9c-eab983f566fd
+  time:timestamp: '2023-04-28T17:13:34.904+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: d46a29437e0cd520abff5ac56ff058e8
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:17:33.123+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: d46a29437e0cd520abff5ac56ff058e8
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: message
+    mimetype: application/json
+    data: '{"message":"ok","delivery":"source"}'
+  time:timestamp: '2023-04-28T17:17:33.122+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 60a0f81b65cf6c1d319d52f671a3d11e
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:17:33.132+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 60a0f81b65cf6c1d319d52f671a3d11e
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order_id
+    value: order1
+  - name: order_item
+    value: wr08
+  - name: count
+    value: 4
+  - name: initial
+    value: false
+  - name: current_tray
+    value:
+    - -135.47
+    - 142.0
+    - 199.0
+  - name: order_list
+    value:
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+  time:timestamp: '2023-04-28T17:17:33.132+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: e6ecac7f7a473576a487d777003e0f56
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: wait_running
+  - name: url
+    value: https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml
+  - name: init
+    value: '{ "check": "/Plc/DB21.DBX35.4" }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:17:33.135+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: e6ecac7f7a473576a487d777003e0f56
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5669'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5669
+    CPEE-INSTANCE-UUID: 7d9fea58-bfd3-4558-a870-677eddb92eca
+    CPEE-BEHAVIOR: wait_running
+  time:timestamp: '2023-04-28T17:17:33.384+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: e6ecac7f7a473576a487d777003e0f56
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5669","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5669","CPEE-INSTANCE-UUID":"7d9fea58-bfd3-4558-a870-677eddb92eca","CPEE-BEHAVIOR":"wait_running"}'
+  time:timestamp: '2023-04-28T17:17:33.383+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: e6ecac7f7a473576a487d777003e0f56
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5669","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5669","CPEE-INSTANCE-UUID":"7d9fea58-bfd3-4558-a870-677eddb92eca","CPEE-STATE":"running"}'
+  time:timestamp: '2023-04-28T17:17:37.367+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: e6ecac7f7a473576a487d777003e0f56
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5669","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5669","CPEE-INSTANCE-UUID":"7d9fea58-bfd3-4558-a870-677eddb92eca","CPEE-STATE":"finished","check":"/Plc/DB21.DBX35.4","check_value":true}'
+  time:timestamp: '2023-04-28T17:17:38.139+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: e6ecac7f7a473576a487d777003e0f56
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:17:38.143+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: e6ecac7f7a473576a487d777003e0f56
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: state
+    value: 'true'
+  time:timestamp: '2023-04-28T17:17:38.141+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 3cd37290b795fa426b94eb5180b9622d
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: fork_running
+  - name: url
+    value: https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20wr08.xml
+  - name: init
+    value: '{ "qr": "*268MFA466*TZHZE 000", "current_tray": [-135.47,142.0,199.0],
+      "initial": false, "program_params": [0.05,0.6,"order1: wr08"], "program_patterns":
+      "[\"yyyy\",\"xxxx\",\"aaaa\"]", "program_url": "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+      }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:17:38.152+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 3cd37290b795fa426b94eb5180b9622d
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:17:38.396+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 3cd37290b795fa426b94eb5180b9622d
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5672'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5672
+    CPEE-INSTANCE-UUID: 4e9fd1d3-d70a-42b7-a62f-9ae0ad01b267
+    CPEE-BEHAVIOR: fork_running
+  time:timestamp: '2023-04-28T17:17:38.389+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 3cd37290b795fa426b94eb5180b9622d
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5672","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5672","CPEE-INSTANCE-UUID":"4e9fd1d3-d70a-42b7-a62f-9ae0ad01b267","CPEE-BEHAVIOR":"fork_running"}'
+  time:timestamp: '2023-04-28T17:17:38.388+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: e964c56af9f013afa94c14ad41da131c
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: id
+    value: mt45takenout
+  - name: ttl
+    value: '0'
+  - name: delete
+    value: 'true'
+  time:timestamp: '2023-04-28T17:17:38.401+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: e964c56af9f013afa94c14ad41da131c
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: slotid
+    data: 6edf1523-3359-44e9-87f2-2163a8a00927
+  time:timestamp: '2023-04-28T17:17:38.408+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: e964c56af9f013afa94c14ad41da131c
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: message
+    mimetype: application/json
+    data: '{"message":"ok","delivery":"source"}'
+  time:timestamp: '2023-04-28T17:21:38.238+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: e964c56af9f013afa94c14ad41da131c
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:21:38.239+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: bb86c7a44fa9fe730f51023074ad6f73
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:21:38.247+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: bb86c7a44fa9fe730f51023074ad6f73
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order_id
+    value: order2
+  - name: order_item
+    value: wr08
+  - name: count
+    value: 5
+  - name: initial
+    value: false
+  - name: current_tray
+    value:
+    - -134.87
+    - 222.0
+    - 199.0
+  - name: order_list
+    value:
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+  time:timestamp: '2023-04-28T17:21:38.246+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ad7949ff315a32e06435b53fc9d4a3b7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: wait_running
+  - name: url
+    value: https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml
+  - name: init
+    value: '{ "check": "/Plc/DB21.DBX35.4" }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:21:38.251+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ad7949ff315a32e06435b53fc9d4a3b7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5694","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5694","CPEE-INSTANCE-UUID":"f88ec925-7778-4e19-b2d9-22d1d09c5b5f","CPEE-BEHAVIOR":"wait_running"}'
+  time:timestamp: '2023-04-28T17:21:38.832+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ad7949ff315a32e06435b53fc9d4a3b7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5694'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5694
+    CPEE-INSTANCE-UUID: f88ec925-7778-4e19-b2d9-22d1d09c5b5f
+    CPEE-BEHAVIOR: wait_running
+  time:timestamp: '2023-04-28T17:21:38.833+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ad7949ff315a32e06435b53fc9d4a3b7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5694","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5694","CPEE-INSTANCE-UUID":"f88ec925-7778-4e19-b2d9-22d1d09c5b5f","CPEE-STATE":"running"}'
+  time:timestamp: '2023-04-28T17:21:41.958+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ad7949ff315a32e06435b53fc9d4a3b7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:21:42.862+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ad7949ff315a32e06435b53fc9d4a3b7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: state
+    value: 'true'
+  time:timestamp: '2023-04-28T17:21:42.861+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: ad7949ff315a32e06435b53fc9d4a3b7
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5694","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5694","CPEE-INSTANCE-UUID":"f88ec925-7778-4e19-b2d9-22d1d09c5b5f","CPEE-STATE":"finished","check":"/Plc/DB21.DBX35.4","check_value":true}'
+  time:timestamp: '2023-04-28T17:21:42.856+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 926c3c3eb3c238ab52b10dd191f9982c
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: fork_running
+  - name: url
+    value: https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20wr08.xml
+  - name: init
+    value: '{ "qr": "*268MFA466*TZHZE 000", "current_tray": [-134.87,222.0,199.0],
+      "initial": false, "program_params": [0.03,0.4,"order2: wr08"], "program_patterns":
+      "[\"yyyy\",\"xxxx\",\"aaaa\"]", "program_url": "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+      }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:21:42.867+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 926c3c3eb3c238ab52b10dd191f9982c
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5697","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5697","CPEE-INSTANCE-UUID":"7422f93c-2018-42fc-82e1-71737f02bc47","CPEE-BEHAVIOR":"fork_running"}'
+  time:timestamp: '2023-04-28T17:21:43.295+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 926c3c3eb3c238ab52b10dd191f9982c
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5697'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5697
+    CPEE-INSTANCE-UUID: 7422f93c-2018-42fc-82e1-71737f02bc47
+    CPEE-BEHAVIOR: fork_running
+  time:timestamp: '2023-04-28T17:21:43.297+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 19ad9eb18e15e08f02f4b02420eabdce
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: slotid
+    data: 001e00ef-11b5-4429-ad5d-7e4108597f3e
+  time:timestamp: '2023-04-28T17:21:43.317+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 926c3c3eb3c238ab52b10dd191f9982c
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:21:43.299+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 19ad9eb18e15e08f02f4b02420eabdce
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: id
+    value: mt45takenout
+  - name: ttl
+    value: '0'
+  - name: delete
+    value: 'true'
+  time:timestamp: '2023-04-28T17:21:43.306+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 19ad9eb18e15e08f02f4b02420eabdce
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: message
+    mimetype: application/json
+    data: '{"message":"ok","delivery":"source"}'
+  time:timestamp: '2023-04-28T17:25:53.792+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 19ad9eb18e15e08f02f4b02420eabdce
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:25:53.797+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 47a195d2e7a02b5428fb12eaaa765bcc
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:25:53.802+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 64a729199ec0a0293a9397fa21b84fd5
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: wait_running
+  - name: url
+    value: https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml
+  - name: init
+    value: '{ "check": "/Plc/DB21.DBX35.4" }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:25:53.804+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 47a195d2e7a02b5428fb12eaaa765bcc
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order_id
+    value: order2
+  - name: order_item
+    value: wr08
+  - name: count
+    value: 6
+  - name: initial
+    value: false
+  - name: current_tray
+    value:
+    - -87.87
+    - -178.0
+    - 199.0
+  - name: order_list
+    value:
+    - - order2
+      - wr08
+    - - order2
+      - wr08
+  time:timestamp: '2023-04-28T17:25:53.801+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 64a729199ec0a0293a9397fa21b84fd5
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5719","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5719","CPEE-INSTANCE-UUID":"4421221e-99c0-4292-8967-82e09f2eba9c","CPEE-BEHAVIOR":"wait_running"}'
+  time:timestamp: '2023-04-28T17:25:54.537+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 64a729199ec0a0293a9397fa21b84fd5
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5719'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5719
+    CPEE-INSTANCE-UUID: 4421221e-99c0-4292-8967-82e09f2eba9c
+    CPEE-BEHAVIOR: wait_running
+  time:timestamp: '2023-04-28T17:25:54.538+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 64a729199ec0a0293a9397fa21b84fd5
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5719","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5719","CPEE-INSTANCE-UUID":"4421221e-99c0-4292-8967-82e09f2eba9c","CPEE-STATE":"running"}'
+  time:timestamp: '2023-04-28T17:25:57.528+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 64a729199ec0a0293a9397fa21b84fd5
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5719","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5719","CPEE-INSTANCE-UUID":"4421221e-99c0-4292-8967-82e09f2eba9c","CPEE-STATE":"finished","check":"/Plc/DB21.DBX35.4","check_value":true}'
+  time:timestamp: '2023-04-28T17:25:58.176+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 64a729199ec0a0293a9397fa21b84fd5
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: state
+    value: 'true'
+  time:timestamp: '2023-04-28T17:25:58.178+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 64a729199ec0a0293a9397fa21b84fd5
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:25:58.179+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 6e270079e2729d123bc0d37148691787
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: fork_running
+  - name: url
+    value: https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20wr08.xml
+  - name: init
+    value: '{ "qr": "*268MFA466*TZHZE 000", "current_tray": [-87.87,-178.0,199.0],
+      "initial": false, "program_params": [0.07,0.4,"order2: wr08"], "program_patterns":
+      "[\"yyyy\",\"xxxx\",\"aaaa\"]", "program_url": "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+      }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:25:58.191+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 6e270079e2729d123bc0d37148691787
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:25:58.504+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 6e270079e2729d123bc0d37148691787
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5721","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5721","CPEE-INSTANCE-UUID":"3949633a-1fef-41f3-8552-8f4dad855efa","CPEE-BEHAVIOR":"fork_running"}'
+  time:timestamp: '2023-04-28T17:25:58.503+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 7d62843f324da63af97db4c6ea523b2f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: id
+    value: mt45takenout
+  - name: ttl
+    value: '0'
+  - name: delete
+    value: 'true'
+  time:timestamp: '2023-04-28T17:25:58.513+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 7d62843f324da63af97db4c6ea523b2f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: slotid
+    data: 70fbd214-e226-49a1-a64b-504b59d6f000
+  time:timestamp: '2023-04-28T17:25:58.521+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 6e270079e2729d123bc0d37148691787
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5721'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5721
+    CPEE-INSTANCE-UUID: 3949633a-1fef-41f3-8552-8f4dad855efa
+    CPEE-BEHAVIOR: fork_running
+  time:timestamp: '2023-04-28T17:25:58.503+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 7d62843f324da63af97db4c6ea523b2f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:29:51.062+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 7d62843f324da63af97db4c6ea523b2f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: message
+    mimetype: application/json
+    data: '{"message":"ok","delivery":"source"}'
+  time:timestamp: '2023-04-28T17:29:51.061+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 5068a6c1c7ba9e87cd0838ffa7e7e1ab
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order_id
+    value: order2
+  - name: order_item
+    value: wr08
+  - name: count
+    value: 7
+  - name: initial
+    value: false
+  - name: current_tray
+    value:
+    - -87.27
+    - -98.0
+    - 199.0
+  - name: order_list
+    value:
+    - - order2
+      - wr08
+  time:timestamp: '2023-04-28T17:29:51.065+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 5068a6c1c7ba9e87cd0838ffa7e7e1ab
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:29:51.069+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 214592b388cfbe53aaab7531844f9b9b
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: wait_running
+  - name: url
+    value: https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml
+  - name: init
+    value: '{ "check": "/Plc/DB21.DBX35.4" }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:29:51.075+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 214592b388cfbe53aaab7531844f9b9b
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5744","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5744","CPEE-INSTANCE-UUID":"24382cb4-e58c-4013-9ceb-a1b420c6da0e","CPEE-BEHAVIOR":"wait_running"}'
+  time:timestamp: '2023-04-28T17:29:51.744+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 214592b388cfbe53aaab7531844f9b9b
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5744'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5744
+    CPEE-INSTANCE-UUID: 24382cb4-e58c-4013-9ceb-a1b420c6da0e
+    CPEE-BEHAVIOR: wait_running
+  time:timestamp: '2023-04-28T17:29:51.746+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 214592b388cfbe53aaab7531844f9b9b
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5744","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5744","CPEE-INSTANCE-UUID":"24382cb4-e58c-4013-9ceb-a1b420c6da0e","CPEE-STATE":"running"}'
+  time:timestamp: '2023-04-28T17:29:54.056+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 214592b388cfbe53aaab7531844f9b9b
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5744","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5744","CPEE-INSTANCE-UUID":"24382cb4-e58c-4013-9ceb-a1b420c6da0e","CPEE-STATE":"finished","check":"/Plc/DB21.DBX35.4","check_value":true}'
+  time:timestamp: '2023-04-28T17:29:54.615+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 214592b388cfbe53aaab7531844f9b9b
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: state
+    value: 'true'
+  time:timestamp: '2023-04-28T17:29:54.617+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 214592b388cfbe53aaab7531844f9b9b
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:29:54.618+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: f8b5dc82ffc83313f97d55e37ed7498a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: fork_running
+  - name: url
+    value: https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20wr08.xml
+  - name: init
+    value: '{ "qr": "*268MFA466*TZHZE 000", "current_tray": [-87.27,-98.0,199.0],
+      "initial": false, "program_params": [0.05,0.6,"order2: wr08"], "program_patterns":
+      "[\"yyyy\",\"xxxx\",\"aaaa\"]", "program_url": "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+      }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:29:54.627+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: f8b5dc82ffc83313f97d55e37ed7498a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5746","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5746","CPEE-INSTANCE-UUID":"0fc80a7f-61ec-4397-8c20-09f8ee258b74","CPEE-BEHAVIOR":"fork_running"}'
+  time:timestamp: '2023-04-28T17:29:54.969+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: f8b5dc82ffc83313f97d55e37ed7498a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5746'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5746
+    CPEE-INSTANCE-UUID: 0fc80a7f-61ec-4397-8c20-09f8ee258b74
+    CPEE-BEHAVIOR: fork_running
+  time:timestamp: '2023-04-28T17:29:54.974+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: f8b5dc82ffc83313f97d55e37ed7498a
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:29:54.978+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 0233472b3cd26045bc30555aeae6fe36
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: slotid
+    data: d950bcb1-6216-46b6-b0bd-b19b468905b5
+  time:timestamp: '2023-04-28T17:29:54.995+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 0233472b3cd26045bc30555aeae6fe36
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: id
+    value: mt45takenout
+  - name: ttl
+    value: '0'
+  - name: delete
+    value: 'true'
+  time:timestamp: '2023-04-28T17:29:54.984+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 0233472b3cd26045bc30555aeae6fe36
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: message
+    mimetype: application/json
+    data: '{"message":"ok","delivery":"source"}'
+  time:timestamp: '2023-04-28T17:33:56.695+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 0233472b3cd26045bc30555aeae6fe36
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:33:56.699+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 867b0f8bf80ce9e69a94e088cb768d40
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: order_id
+    value: order2
+  - name: order_item
+    value: wr08
+  - name: count
+    value: 8
+  - name: initial
+    value: false
+  - name: current_tray
+    value:
+    - -86.67
+    - -18.0
+    - 199.0
+  - name: order_list
+    value: []
+  time:timestamp: '2023-04-28T17:33:56.703+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Next QR, Order Item and Tray
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 867b0f8bf80ce9e69a94e088cb768d40
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:33:56.704+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 2aac52326de13432f4d205799807746f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: wait_running
+  - name: url
+    value: https://centurio.work/design/server/Turm V4.dir/X%20MT45%20Control%20Getter.xml
+  - name: init
+    value: '{ "check": "/Plc/DB21.DBX35.4" }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:33:56.712+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 2aac52326de13432f4d205799807746f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5769","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5769","CPEE-INSTANCE-UUID":"023303b8-8a92-4511-9a2e-56a648503970","CPEE-BEHAVIOR":"wait_running"}'
+  time:timestamp: '2023-04-28T17:33:57.092+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 2aac52326de13432f4d205799807746f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5769'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5769
+    CPEE-INSTANCE-UUID: 023303b8-8a92-4511-9a2e-56a648503970
+    CPEE-BEHAVIOR: wait_running
+  time:timestamp: '2023-04-28T17:33:57.093+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 2aac52326de13432f4d205799807746f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5769","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5769","CPEE-INSTANCE-UUID":"023303b8-8a92-4511-9a2e-56a648503970","CPEE-STATE":"running"}'
+  time:timestamp: '2023-04-28T17:34:00.874+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 2aac52326de13432f4d205799807746f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: dataelements
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5769","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5769","CPEE-INSTANCE-UUID":"023303b8-8a92-4511-9a2e-56a648503970","CPEE-STATE":"finished","check":"/Plc/DB21.DBX35.4","check_value":true}'
+  time:timestamp: '2023-04-28T17:34:01.596+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 2aac52326de13432f4d205799807746f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: state
+    value: 'true'
+  time:timestamp: '2023-04-28T17:34:01.607+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Get Machine State Cancelled
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 2aac52326de13432f4d205799807746f
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:34:01.613+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: f4493d642f1a4d3b1e2d9889b3b0eb37
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: behavior
+    value: fork_running
+  - name: url
+    value: https://centurio.work/design/server/Turm%20V4.dir/Turm%20Single%20wr08.xml
+  - name: init
+    value: '{ "qr": "*268MFA466*TZHZE 000", "current_tray": [-86.67,-18.0,199.0],
+      "initial": false, "program_params": [0.05,0.2,"order2: wr08"], "program_patterns":
+      "[\"yyyy\",\"xxxx\",\"aaaa\"]", "program_url": "https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF"
+      }'
+  - name: endpoints
+    value:
+  - name: attributes
+    value:
+  - name: customization
+    value:
+  time:timestamp: '2023-04-28T17:34:01.619+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: f4493d642f1a4d3b1e2d9889b3b0eb37
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: instance
+    mimetype: application/json
+    data: '{"CPEE-INSTANCE":"5771","CPEE-INSTANCE-URL":"https://centurio.work/flow/engine/5771","CPEE-INSTANCE-UUID":"1d5b38ef-5269-44d8-9ad0-931b94f1652a","CPEE-BEHAVIOR":"fork_running"}'
+  time:timestamp: '2023-04-28T17:34:01.984+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: f4493d642f1a4d3b1e2d9889b3b0eb37
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: task/instantiation
+  raw:
+    CPEE-INSTANCE: '5771'
+    CPEE-INSTANCE-URL: https://centurio.work/flow/engine/5771
+    CPEE-INSTANCE-UUID: 1d5b38ef-5269-44d8-9ad0-931b94f1652a
+    CPEE-BEHAVIOR: fork_running
+  time:timestamp: '2023-04-28T17:34:01.989+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Spawn Production
+  concept:endpoint: https://centurio.work/flow/start/url/
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: f4493d642f1a4d3b1e2d9889b3b0eb37
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:34:01.994+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 196ae143f144a3b144420724e447f750
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: id
+    value: mt45takenout
+  - name: ttl
+    value: '0'
+  - name: delete
+    value: 'true'
+  time:timestamp: '2023-04-28T17:34:01.997+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 196ae143f144a3b144420724e447f750
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: slotid
+    data: 7ac6f8ae-c0d1-4d59-90bc-bceda09368fe
+  time:timestamp: '2023-04-28T17:34:02.004+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 196ae143f144a3b144420724e447f750
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2023-04-28T17:37:54.002+02:00'
+---
+event:
+  concept:instance: 5541
+  concept:name: Wait for MT45 Takeout
+  concept:endpoint: https-get://centurio.work/ing/correlators/message/receive/
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 196ae143f144a3b144420724e447f750
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: message
+    mimetype: application/json
+    data: '{"message":"ok","delivery":"source"}'
+  time:timestamp: '2023-04-28T17:37:54.000+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: stopped
+  time:timestamp: '2023-04-28T17:37:54.005+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: stopping
+  time:timestamp: '2023-04-28T17:37:54.004+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: running
+  time:timestamp: '2023-04-28T17:38:51.768+02:00'
+---
+event:
+  concept:instance: 5541
+  id:id: external
+  cpee:activity: external
+  cpee:instance: ca2328b4-2831-431f-af1d-e187ff267f72
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: finished
+  time:timestamp: '2023-04-28T17:38:51.771+02:00'

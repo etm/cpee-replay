@@ -1,0 +1,22 @@
+#!/usr/bin/ruby
+require 'rubygems'
+if File.exist?('../lib/cpee-replay/implementation.rb')
+  require '../lib/cpee-replay/implementation'
+else
+  require 'cpee-replay/implementation'
+end
+
+options = {
+  :host => 'localhost',
+  :port => 9399,
+  :secure => false
+}
+
+Riddl::Server.new(CPEE::Replay::SERVER, options) do
+  accessible_description true
+  cross_site_xhr true
+
+  @riddl_opts[:data_dir] ||= File.join(__dir__,'data')
+
+  use CPEE::Replay::implementation(@riddl_opts)
+end.loop!

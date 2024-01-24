@@ -1,0 +1,4 @@
+https-put://centurio.work/ing/opcua/write/,71a6b8c040d52858e294bafd6e0f6152,c,6443,644
+https-put://centurio.work/ing/opcua/write/,71a6b8c040d52858e294bafd6e0f6152,r,7091,430
+https-get://centurio.work/ing/opcua/read/,263e067dd678f427a8f455ddc9cfb920,c,7525,610
+https-get://centurio.work/ing/opcua/read/,263e067dd678f427a8f455ddc9cfb920,r,8529,430
