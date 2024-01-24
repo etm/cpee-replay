@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<testset xmlns="http://cpee.org/ns/properties/2.0">
+  <executionhandler>ruby</executionhandler>
+  <dataelements>
+    <queue>MaxxTurn45/1682696075.7779667</queue>
+    <machine>MaxxTurn45</machine>
+    <qr>*268MFA466*TZHZE 000</qr>
+  </dataelements>
+  <endpoints>
+    <timeout>http://gruppe.wst.univie.ac.at/~mangler/services/timeout.php</timeout>
+    <start_instance>https://centurio.work/flow/start/instance/</start_instance>
+    <start_url>https://centurio.work/flow/start/url/</start_url>
+    <queue>https://centurio.work/data/dpnorth/queue/</queue>
+  </endpoints>
+  <description>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <manipulate id="a2" label="Correct  Queue">endpoints.queue = File.join(endpoints.queue,data.queue,'push')</manipulate>
+      <call id="a1" endpoint="queue">
+        <parameters>
+          <label>Fetch</label>
+          <method>:get</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result"/>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes>
+              <probe>
+                <id>values</id>
+                <source>machine</source>
+                <extractor_type>extrinsic</extractor_type>
+                <extractor_code>values = Stream.new(data.machine)
+result.each do |e|
+  sp = StreamPoint.new(e['name'])
+  sp.value = e['value']
+  sp.meta = e['meta'] if e['meta']
+  sp.timestamp = e['timestamp']
+  sp.source = e['source'] if e['source']
+  values &lt;&lt; sp
+end
+values</extractor_code>
+                <extractor_url/>
+                <extractor_params/>
+                <visualizer_url/>
+                <visualizer_params/>
+              </probe>
+            </probes>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+    </description>
+  </description>
+</testset>

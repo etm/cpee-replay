@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<testset xmlns="http://cpee.org/ns/properties/2.0">
+  <executionhandler>ruby</executionhandler>
+  <dataelements>
+    <params>[0.05, 0.2, "order1: wr08"]</params>
+    <patterns>["yyyy", "xxxx", "aaaa"]</patterns>
+    <program_url>https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF</program_url>
+  </dataelements>
+  <endpoints>
+    <timeout>http://gruppe.wst.univie.ac.at/~mangler/services/timeout.php</timeout>
+    <start_git>https://centurio.work/flow/start/git/</start_git>
+    <fetch>https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF</fetch>
+  </endpoints>
+  <description>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <manipulate id="a2" label="Set Endpoint">endpoints.fetch = data.program_url</manipulate>
+      <call id="a1" endpoint="fetch">
+        <parameters>
+          <label>Fetch Program</label>
+          <method>:get</method>
+          <arguments/>
+          <stream>
+            <sensors/>
+            <aggregators/>
+            <costs/>
+          </stream>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.program = result</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_timing>
+            <_timing_min/>
+            <_timing_max/>
+            <_timing_avg/>
+          </_timing>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+      </call>
+      <manipulate id="a3" label="Replace Patterns with Params">data.patterns.each_with_index do |pattern,index|
+  param = data.params[index]
+  data.program.gsub!(/#{pattern}/,param.to_s)
+end</manipulate>
+    </description>
+  </description>
+</testset>

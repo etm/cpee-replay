@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<testset xmlns="http://cpee.org/ns/properties/2.0">
+  <executionhandler>ruby</executionhandler>
+  <dataelements>
+    <qr>*268MFA466*TZHZE 000</qr>
+    <initial>false</initial>
+    <current_tray>[-87.27, -98.0, 199.0]</current_tray>
+    <program_params>[0.05, 0.6, "order2: wr08"]</program_params>
+    <program_patterns>["yyyy", "xxxx", "aaaa"]</program_patterns>
+    <program_url>https://centurio.work/artefacts/etm/MT45/raw/master/TURM_PSC.MPF</program_url>
+  </dataelements>
+  <endpoints>
+    <timeout>http://gruppe.wst.univie.ac.at/~mangler/services/timeout.php</timeout>
+    <start_instance>https://centurio.work/flow/start/instance/</start_instance>
+    <start_url>https://centurio.work/flow/start/url/</start_url>
+    <measure>https://centurio.work/out/measure_MaxxTurn45/tasks/</measure>
+    <ipc_send>https-post://centurio.work/ing/correlators/message/send/</ipc_send>
+  </endpoints>
+  <description>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <parallel wait="-1" cancel="last">
+        <parallel_branch pass="" local="">
+          <call id="a6" endpoint="start_url">
+            <parameters>
+              <label>Create Program</label>
+              <method>:post</method>
+              <arguments>
+                <behavior>wait_running</behavior>
+                <url>https://centurio.work/design/server/Turm%20V4.dir/X%20Generate%20NC.xml</url>
+                <init>
+                  <params>!data.program_params</params>
+                  <patterns>!data.program_patterns</patterns>
+                  <program_url>!data.program_url</program_url>
+                </init>
+                <endpoints/>
+                <attributes/>
+                <customization/>
+              </arguments>
+            </parameters>
+            <code>
+              <prepare/>
+              <finalize output="result">data.program = result['program']</finalize>
+              <update output="result"/>
+              <rescue output="result"/>
+            </code>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+              <code>
+                <description/>
+              </code>
+            </documentation>
+          </call>
+          <call id="a5" endpoint="start_url">
+            <parameters>
+              <label>Set Program MT45</label>
+              <method>:post</method>
+              <arguments>
+                <behavior>wait_running</behavior>
+                <url>https://centurio.work/design/server/Turm%20V4.dir/X%20MT45%20SP.xml</url>
+                <init>
+                  <program>!data.program</program>
+                  <dir>CDP</dir>
+                  <name>TURM_PSC1.MPF</name>
+                </init>
+                <endpoints/>
+                <attributes/>
+                <customization/>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+          <call id="a4" endpoint="start_url">
+            <parameters>
+              <label>MT45 Start</label>
+              <method>:post</method>
+              <arguments>
+                <behavior>wait_running</behavior>
+                <url>https://centurio.work/design/server/Turm%20V4.dir/X%20MT45%20Start.xml</url>
+                <init/>
+                <endpoints/>
+                <attributes/>
+                <customization/>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg>0.29</_timing_avg>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+        </parallel_branch>
+        <parallel_branch pass="" local="">
+          <call id="a1" endpoint="start_url">
+            <parameters>
+              <label>Turn</label>
+              <method>:post</method>
+              <arguments>
+                <info>Turm Turn Production</info>
+                <behavior>wait_running</behavior>
+                <url>https://centurio.work/design/server/Turm V4.dir/Production%20Vx.xml</url>
+                <init>
+                  <machine>MaxxTurn45</machine>
+                  <program>_N_TURM_PSC1_MPF</program>
+                  <program_path>Program/progName1</program_path>
+                  <trigger>State/progStatus</trigger>
+                  <trigger_start>3</trigger_start>
+                  <trigger_pause>2</trigger_pause>
+                  <trigger_end>5</trigger_end>
+                  <event_batch>333</event_batch>
+                  <label>Turm Turn Machining</label>
+                  <qr>!data.qr</qr>
+                </init>
+              </arguments>
+              <sensors/>
+            </parameters>
+            <_timing>
+              <_timing_weight/>
+              <_timing_avg>1</_timing_avg>
+              <explanations>
+                <explanation>
+                  <type>&gt;</type>
+                  <deviation>3</deviation>
+                  <behaviour>Immediately</behaviour>
+                  <grace>0.0</grace>
+                  <text>has a problem - MaxxTurn does not react.</text>
+                </explanation>
+              </explanations>
+            </_timing>
+            <_notes>
+              <_notes_general/>
+              <_attachments/>
+            </_notes>
+          </call>
+        </parallel_branch>
+      </parallel>
+      <call id="a2" endpoint="start_url">
+        <parameters>
+          <label>MT45 Take Out</label>
+          <method>:post</method>
+          <arguments>
+            <behavior>wait_running</behavior>
+            <url>https://centurio.work/design/server/Turm V4.dir/Turm%20MT45%20Take%20Out.xml</url>
+            <init>
+              <initial>!data.initial</initial>
+            </init>
+            <endpoints/>
+            <customization/>
+          </arguments>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.initial = result['initial']</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg>1.3</_timing_avg>
+            <explanations/>
+          </_timing>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a3" endpoint="start_url">
+        <parameters>
+          <label>Robot Traying</label>
+          <method>:post</method>
+          <arguments>
+            <behavior>wait_running</behavior>
+            <url>https://centurio.work/design/server/Turm V4.dir/Turm%20IRB2600%20Tray.xml</url>
+            <init>
+              <x>!data.current_tray[0]</x>
+              <y>!data.current_tray[1]</y>
+              <z>!data.current_tray[2]</z>
+            </init>
+            <endpoints/>
+            <attributes/>
+            <customization/>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg>0.01</_timing_avg>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+    </description>
+  </description>
+</testset>

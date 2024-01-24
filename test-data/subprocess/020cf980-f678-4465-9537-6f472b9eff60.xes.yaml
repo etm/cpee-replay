@@ -1,0 +1,213 @@
+---
+log:
+  namespaces:
+    stream: https://cpee.org/datastream/
+    ssn: http://www.w3.org/ns/ssn/
+    sosa: http://www.w3.org/ns/sosa/
+  xes:
+    creator: cpee.org
+    features: nested-attributes
+  extension:
+    time: http://www.xes-standard.org/time.xesext
+    concept: http://www.xes-standard.org/concept.xesext
+    id: http://www.xes-standard.org/identity.xesext
+    lifecycle: http://www.xes-standard.org/lifecycle.xesext
+    cpee: http://cpee.org/cpee.xesext
+    stream: https://cpee.org/datastream/datastream.xesext
+  global:
+    trace:
+      concept:name: __INVALID__
+      cpee:name: __INVALID__
+    event:
+      concept:instance: -1
+      concept:name: __INVALID__
+      concept:endpoint: ''
+      id:id: ''
+      cpee:uuid: ''
+      lifecycle:transition: complete
+      cpee:lifecycle:transition: activity/calling
+      time:timestamp: ''
+  trace:
+    concept:name: 28891
+    cpee:name: Wait
+    cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+---
+event:
+  concept:instance: 28891
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: ready
+  time:timestamp: '2024-01-24T20:57:36.917+01:00'
+---
+event:
+  concept:instance: 28891
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: b
+    value: 6
+  time:timestamp: '2024-01-24T20:57:36.941+01:00'
+---
+event:
+  concept:instance: 28891
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: endpoints/change
+  data:
+  - name: timeout
+    value: https://cpee.org/services/timeout.php
+  - name: subprocess
+    value: https://cpee.org/flow/start/url/
+  time:timestamp: '2024-01-24T20:57:36.946+01:00'
+---
+event:
+  concept:instance: 28891
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: description/change
+  cpee:description: |
+    <?xml version="1.0"?>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <call id="a1" endpoint="timeout">
+        <parameters>
+          <label>Wait</label>
+          <method>:post</method>
+          <arguments>
+            <timeout>2</timeout>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+    </description>
+  time:timestamp: '2024-01-24T20:57:36.963+01:00'
+---
+event:
+  concept:instance: 28891
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: attributes/change
+  data:
+  - name: info
+    value: Wait
+  - name: creator
+    value: Christine Ashcreek
+  - name: author
+    value: Christine Ashcreek
+  - name: modeltype
+    value: CPEE
+  - name: guarded
+    value: none
+  - name: guarded_id
+    value: ''
+  - name: model_uuid
+    value: c92d0c0b-8bbd-40dd-baad-01c5616dfceb
+  - name: model_version
+    value: ''
+  - name: theme
+    value: extended
+  - name: design_dir
+    value: Templates.dir
+  - name: design_stage
+    value: development
+  time:timestamp: '2024-01-24T20:57:36.954+01:00'
+---
+event:
+  concept:instance: 28891
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: running
+  time:timestamp: '2024-01-24T20:57:39.533+01:00'
+---
+event:
+  concept:instance: 28891
+  concept:name: Wait
+  concept:endpoint: https://cpee.org/services/timeout.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: 6a69ed3bca1abfb42a2ccf5cce8ec797
+  cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '2'
+  time:timestamp: '2024-01-24T20:57:39.608+01:00'
+---
+event:
+  concept:instance: 28891
+  concept:name: Wait
+  concept:endpoint: https://cpee.org/services/timeout.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: 6a69ed3bca1abfb42a2ccf5cce8ec797
+  cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 2'
+  time:timestamp: '2024-01-24T20:57:41.633+01:00'
+---
+event:
+  concept:instance: 28891
+  concept:name: Wait
+  concept:endpoint: https://cpee.org/services/timeout.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: 6a69ed3bca1abfb42a2ccf5cce8ec797
+  cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2024-01-24T20:57:41.670+01:00'
+---
+event:
+  concept:instance: 28891
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 020cf980-f678-4465-9537-6f472b9eff60
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: finished
+  time:timestamp: '2024-01-24T20:57:41.697+01:00'

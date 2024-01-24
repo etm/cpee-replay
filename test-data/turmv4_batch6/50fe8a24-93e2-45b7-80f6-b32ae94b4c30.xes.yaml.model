@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<testset xmlns="http://cpee.org/ns/properties/2.0">
+  <executionhandler>ruby</executionhandler>
+  <dataelements>
+    <initial>false</initial>
+    <magazine_z>601.4993008403778</magazine_z>
+    <test>215.70005169677734</test>
+  </dataelements>
+  <endpoints>
+    <ipc_receive>https-get://centurio.work/ing/correlators/message/receive/</ipc_receive>
+    <magazine_x>https://centurio.work/data/dpnorth/values/MaxxTurn45/Axes/X/aaLeadP</magazine_x>
+    <magazine_z>https://centurio.work/data/dpnorth/values/MaxxTurn45/Axes/Z/aaLeadP</magazine_z>
+  </endpoints>
+  <description>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <choose mode="exclusive">
+        <alternative condition="data.initial">
+          <manipulate id="a6" label="Not First Part">data.initial = false</manipulate>
+        </alternative>
+        <otherwise>
+          <call id="a15" endpoint="ipc_receive">
+            <parameters>
+              <label>Wait For Unload End</label>
+              <method>:get</method>
+              <arguments>
+                <id>maxxturn45unloadready</id>
+                <ttl>0</ttl>
+              </arguments>
+              <sensors/>
+            </parameters>
+            <_timing>
+              <_timing_min/>
+              <_timing_max/>
+              <_timing_avg>70</_timing_avg>
+              <explanations>
+                <explanation>
+                  <type>&gt;</type>
+                  <deviation>-60</deviation>
+                  <behaviour>Immediately</behaviour>
+                  <grace>0.0</grace>
+                  <text>has detected: Hint: No previous part detected.</text>
+                </explanation>
+                <explanation>
+                  <type>&gt;</type>
+                  <deviation>30</deviation>
+                  <behaviour>Immediately</behaviour>
+                  <grace>0.0</grace>
+                  <text>has a problem - Part unloading taking too long.</text>
+                </explanation>
+              </explanations>
+            </_timing>
+            <_notes>
+              <_notes_general/>
+              <_notes_output/>
+              <_attachments/>
+            </_notes>
+          </call>
+        </otherwise>
+      </choose>
+      <call id="a3" endpoint="magazine_x">
+        <parameters>
+          <label>Get Magazine X</label>
+          <method>:get</method>
+          <arguments/>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.magazine_x = result.to_f</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a5" endpoint="magazine_z">
+        <parameters>
+          <label>Get Magazine Z</label>
+          <method>:get</method>
+          <arguments/>
+          <sensors/>
+        </parameters>
+        <_timing>
+          <_timing_min/>
+          <_timing_max/>
+          <_timing_avg/>
+        </_timing>
+        <_notes>
+          <_notes_general/>
+          <_notes_output/>
+          <_attachments/>
+        </_notes>
+        <code>
+          <finalize output="result">data.magazine_z = result.to_f</finalize>
+          <update output="result"/>
+        </code>
+      </call>
+      <choose mode="exclusive">
+        <alternative condition="data.magazine_x &lt; 210 || data.magazine_z &lt; 600">
+          <stop id="a16"/>
+        </alternative>
+        <otherwise/>
+      </choose>
+    </description>
+  </description>
+</testset>

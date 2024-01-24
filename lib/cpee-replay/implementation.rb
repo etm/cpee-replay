@@ -94,7 +94,6 @@ def send_back(fname, event, callback, start)
     dur = ts - start
     Thread.new do
       sleep dur
-      pp dur
       client = Riddl::Client.new(callback)
       res = item.dig('event','raw')&.map do |i|
         if i['mimetype']

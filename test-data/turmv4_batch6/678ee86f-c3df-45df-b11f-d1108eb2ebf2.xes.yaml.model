@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<testset xmlns="http://cpee.org/ns/properties/2.0">
+  <executionhandler>ruby</executionhandler>
+  <dataelements>
+    <includes>https://centurio.work/artefacts/etm/IRB2600/raw/master/Generic/Turm_General.mod</includes>
+    <move>https://centurio.work/artefacts/etm/IRB2600/raw/master/Generic/move_Door_to_GS2.mod</move>
+    <x>0</x>
+    <y>0</y>
+    <z>0</z>
+    <gripper>Open</gripper>
+    <urls>["includes", "move"]</urls>
+    <program/>
+    <vars/>
+    <check_var1>PF_IRB2600.Controller.State</check_var1>
+    <check_var2>PF_IRB2600.Controller.StateMachine</check_var2>
+  </dataelements>
+  <endpoints>
+    <logon>http://localhost:8017/call/Logon?id=PF_IRB2600</logon>
+    <set>http://localhost:8017/call/SetProgram?id=PF_IRB2600&amp;task=T_ROB1&amp;module=OperationModule&amp;mode=Replace</set>
+    <assign>http://localhost:8017/call/AssignProgram?id=PF_IRB2600&amp;module=OperationModule&amp;routine=Operation</assign>
+    <reset>http://localhost:8017/call/ResetPointer?id=PF_IRB2600</reset>
+    <start>http://localhost:8017/call/StartProgram?id=PF_IRB2600</start>
+    <ep_check>http://localhost:8017/server/Current</ep_check>
+  </endpoints>
+  <description>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <loop mode="pre_test" condition="data.urls.length &gt; 0">
+        <manipulate id="a6" label="Set Fetch Endpoint">endpoints.fetch = data.method_missing(data.urls.shift.to_sym)</manipulate>
+        <call id="a4" endpoint="fetch">
+          <parameters>
+            <label>Fetch Program</label>
+            <method>:get</method>
+            <arguments/>
+            <sensors/>
+          </parameters>
+          <_timing>
+            <_timing_min/>
+            <_timing_max/>
+            <_timing_avg/>
+          </_timing>
+          <_notes>
+            <_notes_general/>
+            <_notes_output/>
+            <_attachments/>
+          </_notes>
+          <code>
+            <finalize output="result">data.program ||= ""
+data.vars ||= ""
+
+temp = result.sub(/module\s+[^\s]+/i,'').sub(/endmodule/i,'')
+temp.gsub!(/^(\s*(var|pers|const)\s+.*?)$\s/i) do |m|
+  data.vars &lt;&lt; m + "\n"
+  ''
+end
+data.vars.gsub!(/%%x/,data.x.to_s)
+data.vars.gsub!(/%%y/,data.y.to_s)
+data.vars.gsub!(/%%z/,data.z.to_s)
+
+temp.gsub!(/%%g/,data.gripper)
+
+data.program &lt;&lt; temp</finalize>
+            <update output="result"/>
+          </code>
+        </call>
+      </loop>
+      <manipulate id="a11" label="Assemble Porgram">data.program = "MODULE OperationModule\n" + data.vars + "\n" + data.program + "\nENDMODULE"</manipulate>
+      <call id="a1" endpoint="logon">
+        <parameters>
+          <label>Logon</label>
+          <method>:get</method>
+          <arguments/>
+          <sensors/>
+        </parameters>
+        <_timing>
+          <_timing_min/>
+          <_timing_max/>
+          <_timing_avg/>
+        </_timing>
+        <_notes>
+          <_notes_general/>
+          <_attachments/>
+        </_notes>
+      </call>
+      <call id="a2" endpoint="set">
+        <parameters>
+          <label>Set Program</label>
+          <method>:get</method>
+          <arguments>
+            <content>!data.program</content>
+          </arguments>
+          <sensors/>
+        </parameters>
+        <_timing>
+          <_timing_min/>
+          <_timing_max/>
+          <_timing_avg/>
+        </_timing>
+        <_notes>
+          <_notes_general/>
+          <_attachments/>
+        </_notes>
+      </call>
+      <call id="a3" endpoint="assign">
+        <parameters>
+          <label>Assign Program</label>
+          <method>:get</method>
+          <arguments/>
+          <sensors/>
+        </parameters>
+        <_timing>
+          <_timing_min/>
+          <_timing_max/>
+          <_timing_avg/>
+        </_timing>
+        <_notes>
+          <_notes_general/>
+          <_attachments/>
+        </_notes>
+      </call>
+      <loop mode="pre_test" condition="true">
+        <call id="a7" endpoint="ep_check">
+          <parameters>
+            <label>Check State</label>
+            <method>:get</method>
+            <arguments>
+              <regex>!data.check_var1 + "*"</regex>
+            </arguments>
+          </parameters>
+          <code>
+            <prepare/>
+            <finalize output="result">data.xxx = result.dig(data.check_var1)
+data.yyy = result.dig(data.check_var2)
+data.state = result.dig(data.check_var1,'value')
+data.statemachine = result.dig(data.check_var2,'value')
+sleep 1</finalize>
+            <update output="result"/>
+            <rescue output="result"/>
+          </code>
+          <annotations>
+            <_timing>
+              <_timing_weight/>
+              <_timing_avg/>
+              <explanations/>
+            </_timing>
+            <_shifting>
+              <_shifting_type>Duration</_shifting_type>
+            </_shifting>
+            <_context_data_analysis>
+              <probes>
+                <probe>
+                  <id>IRB2600</id>
+                  <source>IRB2600</source>
+                  <extractor_type>extrinsic</extractor_type>
+                  <extractor_code>values = Stream.new('IRB2600')
+result.each do |k,v|
+  if k.start_with?('PF_IRB2600.Controller') || k.start_with?('PF_IRB2600.RapidDomain')
+    sp = StreamPoint.new(k.split('.')[2..-1].join('.'))
+    sp.value = v['value']
+    sp.meta = v['meta'] if v['meta']
+    sp.timestamp = v['timestamp']
+    values &lt;&lt; sp
+  end
+end
+values</extractor_code>
+                  <extractor_url/>
+                  <extractor_params/>
+                  <visualizer_url/>
+                  <visualizer_params/>
+                </probe>
+              </probes>
+              <ips/>
+            </_context_data_analysis>
+            <report>
+              <url/>
+            </report>
+            <_notes>
+              <_notes_general/>
+            </_notes>
+          </annotations>
+          <documentation>
+            <input/>
+            <output/>
+            <implementation>
+              <description/>
+            </implementation>
+            <code>
+              <description/>
+            </code>
+          </documentation>
+        </call>
+        <choose mode="exclusive">
+          <alternative condition="data.state.to_s == &quot;MotorsOn&quot; &amp;&amp; data.statemachine == &quot;Finished&quot; &amp;&amp; data.started == true">
+            <escape id="a10"/>
+          </alternative>
+          <alternative condition="data.state.to_s != &quot;MotorsOn&quot;">
+            <manipulate id="a9" label="Not started">data.started = false</manipulate>
+          </alternative>
+          <alternative condition="data.state.to_s == &quot;MotorsOn&quot; &amp;&amp; (data.statemachine == &quot;Finished&quot; || data.statemachine == &quot;Halted&quot;) &amp;&amp; !data.started">
+            <call id="a5" endpoint="start">
+              <parameters>
+                <label>Start</label>
+                <method>:get</method>
+                <arguments/>
+                <sensors/>
+              </parameters>
+              <_timing>
+                <_timing_min/>
+                <_timing_max/>
+                <_timing_avg/>
+              </_timing>
+              <_notes>
+                <_notes_general/>
+                <_notes_output/>
+                <_attachments/>
+              </_notes>
+              <code>
+                <finalize output="result">data.started = true
+sleep 1</finalize>
+                <update output="result"/>
+              </code>
+            </call>
+          </alternative>
+          <otherwise/>
+        </choose>
+      </loop>
+    </description>
+  </description>
+</testset>
