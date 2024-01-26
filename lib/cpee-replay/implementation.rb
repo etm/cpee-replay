@@ -25,7 +25,7 @@ require 'mimemagic'
 require 'base64'
 require 'charlock_holmes'
 
-def detect_encoding(text)
+def detect_encoding(text) #{{{
   if text.is_a? String
     if text.valid_encoding? && text.encoding.name == 'UTF-8'
       'UTF-8'
@@ -42,13 +42,11 @@ def detect_encoding(text)
   else
     'OTHER'
   end
-end
-
-def convert_to_base64(text)
+end #}}}
+def convert_to_base64(text) #{{{
   ('data:' + MimeMagic.by_magic(text).type + ';base64,' + Base64::encode64(text)) rescue ('data:application/octet-stream;base64,' + Base64::encode64(text))
-end
-
-def structurize_result(result,name='value')
+end #}}}
+def structurize_result(result,name='value') #{{{
   result.map do |r|
     if r.is_a? Riddl::Parameter::Simple
       ttt = r.value
@@ -83,13 +81,24 @@ def structurize_result(result,name='value')
       tmp
     end
   end
+end #}}}
+
+def get_record(name,where)
+  if name.is_a? String
+    ffile = File.open(name)
+  else
+    ffile = name
+  end
+  ffile.seek(where['s'],IO::SEEK_SET)
+  item = YAML::load(ffile.read(where['l']))
+  ffile.close unless name.is_a? String
+  item
 end
 
 def send_back(fname, event, callback, start)
   ffile = File.open(fname)
   event.each do |sendbacks|
-    ffile.seek(sendbacks[1]['s'],IO::SEEK_SET)
-    item = YAML::load(ffile.read(sendbacks[1]['l']))
+    item = get_record(ffile,sendbacks[1])
     ts = Time.parse(item.dig('event', 'time:timestamp'))
     dur = ts - start
     Thread.new do
@@ -115,18 +124,16 @@ module CPEE
 
     class DoIt < Riddl::Implementation
       def response
-        if @h['CPEE_ATTR_REPLAY_TARGET']
+        if @h['CPEE_ATTR_TWIN_TARGET']
           dd = @a[0]
           indexes = @a[1]
           me = @h['CPEE_INSTANCE_UUID']
 
-          fdigest = Digest::SHA256.hexdigest(@h['CPEE_ATTR_REPLAY_TARGET'])
-          idigest = Digest::SHA256.hexdigest(@h['CPEE_ATTR_REPLAY_TARGET'] + '.index')
-          if File.exist?(File.join(dd,fdigest)) #{{{
-            ffile = File.open(File.join(dd,fdigest))
-          else
+          fdigest = Digest::SHA256.hexdigest(@h['CPEE_ATTR_TWIN_TARGET'])
+          idigest = Digest::SHA256.hexdigest(@h['CPEE_ATTR_TWIN_TARGET'] + '.index')
+          unless File.exist?(File.join(dd,fdigest)) #{{{
             ffile = File.open(File.join(dd,fdigest),'w+')
-            request = Typhoeus::Request.new(@h['CPEE_ATTR_REPLAY_TARGET'])
+            request = Typhoeus::Request.new(@h['CPEE_ATTR_TWIN_TARGET'])
             request.on_headers do |response|
               if response.code != 200
                 raise "Request failed"
@@ -140,11 +147,9 @@ module CPEE
             end
             request.run
           end #}}}
-          if File.exist?(File.join(dd,idigest)) #{{{
-            ifile = File.open(File.join(dd,idigest))
-          else
+          unless File.exist?(File.join(dd,idigest)) #{{{
             ifile = File.open(File.join(dd,idigest),'w+')
-            request = Typhoeus::Request.new(@h['CPEE_ATTR_REPLAY_TARGET'] + '.index')
+            request = Typhoeus::Request.new(@h['CPEE_ATTR_TWIN_TARGET'] + '.index')
             request.on_headers do |response|
               if response.code != 200
                 raise "Request failed"
@@ -169,22 +174,30 @@ module CPEE
           indexes[me].each_with_index do |x,i|
             k,e = x
             if k == oep
-              call = e.find{|loc| loc[0] == 'c' }
-              if call
-                ffile = File.open(File.join(dd,fdigest))
-                ffile.seek(call[1]['s'],IO::SEEK_SET)
-                item = YAML::load(ffile.read(call[1]['l']))
-                ffile.close
+              indexes[me].delete(x)
+              if call = e.find{|loc| loc[0] == 'c' }
+                item = get_record(File.join(dd,fdigest),call[1])
                 if item.dig('event', 'data') == params
                   callback = @h['CPEE_CALLBACK']
                   start = Time.parse(item.dig('event', 'time:timestamp'))
                   e.delete(call)
                 end
               end
-              indexes[me].delete(x)
-              send_back File.join(dd,fdigest), e, callback, start
-              @headers << Riddl::Header.new('CPEE-CALLBACK', 'true')
-              return
+              if instantiate = e.find{|loc| loc[0] == 'i' }
+                item = get_record(File.join(dd,fdigest),instantiate[1])
+                dname = File.dirname(@h['CPEE_ATTR_TWIN_TARGET'])
+                sub_id = item.dig('event','raw','CPEE-INSTANCE-UUID')
+
+                @headers << Riddl::Header.new('CPEE-TWIN-MODEL', File.join(dname,sub_id) + '.xes.yaml.model')
+                @headers << Riddl::Header.new('CPEE-TWIN-TARGET', File.join(dname,sub_id) + '.xes.yaml')
+                @headers << Riddl::Header.new('CPEE-TWIN-TASKTYPE', instantiate[0])
+                @status = 561
+                return
+              else
+                send_back File.join(dd,fdigest), e, callback, start
+                @headers << Riddl::Header.new('CPEE-CALLBACK', 'true')
+                return
+              end
             end
           end
         end
