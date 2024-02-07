@@ -117,6 +117,14 @@ def send_back(fname, event, callback, start)
   ffile.close
 end
 
+def compare(a,b)
+  yes = false
+  a.each do |e|
+    yes = true if b.find{ |f| f['name'] == e['name'] && e['value'].to_s == f['value'].to_s }
+  end
+  a.length == b.length && yes
+end
+
 module CPEE
   module Replay
 
@@ -177,7 +185,7 @@ module CPEE
               indexes[me].delete(x)
               if call = e.find{|loc| loc[0] == 'c' }
                 item = get_record(File.join(dd,fdigest),call[1])
-                if item.dig('event', 'data') == params
+                if compare(item.dig('event', 'data'),params)
                   callback = @h['CPEE_CALLBACK']
                   start = Time.parse(item.dig('event', 'time:timestamp'))
                   e.delete(call)

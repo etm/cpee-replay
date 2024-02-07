@@ -1,11 +1,21 @@
-<?xml version="1.0"?>
 <testset xmlns="http://cpee.org/ns/properties/2.0">
   <executionhandler>ruby</executionhandler>
   <dataelements/>
   <endpoints>
     <subprocess>https-post://cpee.org/flow/start/url/</subprocess>
+    <user>https-post://cpee.org/services/timeout-user.php</user>
+    <auto>https-post://cpee.org/services/timeout-auto.php</auto>
     <timeout>https://cpee.org/services/timeout.php</timeout>
+    <send>https-post://cpee.org/ing/correlators/message/send/</send>
+    <receive>https-get://cpee.org/ing/correlators/message/receive/</receive>
   </endpoints>
+  <attributes>
+    <info>Plain Instance</info>
+    <modeltype>CPEE</modeltype>
+    <theme>extended</theme>
+    <replay_engine>https://cpee.org/replay/</replay_engine>
+    <replay_target>https://cpee.org/replay-data/subprocess/2748994a-493b-4485-a3fe-4ed71371b38a.xes.yaml</replay_target>
+  </attributes>
   <description>
     <description xmlns="http://cpee.org/ns/description/1.0">
       <call id="a2" endpoint="timeout">
@@ -99,4 +109,9 @@
       </call>
     </description>
   </description>
+  <transformation>
+    <description type="copy"/>
+    <dataelements type="none"/>
+    <endpoints type="none"/>
+  </transformation>
 </testset>
