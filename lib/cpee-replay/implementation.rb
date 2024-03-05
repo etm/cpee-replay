@@ -91,17 +91,17 @@ def get_record(name,where)
   end
   ffile.seek(where['s'],IO::SEEK_SET)
   item = YAML::load(ffile.read(where['l']))
-  ffile.close unless name.is_a? String
+  ffile.close if name.is_a? String
   item
 end
 
 def send_back(fname, event, callback, start)
   ffile = File.open(fname)
-  event.each do |sendbacks|
+  event.each_with_index do |sendbacks, index|
     item = get_record(ffile,sendbacks[1])
     ts = Time.parse(item.dig('event', 'time:timestamp'))
     dur = ts - start
-    Thread.new do
+    Thread.new(item,dur,callback,event,index) do |item, duration, callback, event, index|
       sleep dur
       client = Riddl::Client.new(callback)
       res = item.dig('event','raw')&.map do |i|
@@ -110,6 +110,9 @@ def send_back(fname, event, callback, start)
         else
           Riddl::Parameter::Simple.new(i['name'],i['data'])
         end
+      end
+      unless event.length == index + 1
+        res << Riddl::Header.new('CPEE-UPDATE', 'true')
       end
       client.put res
     end
@@ -122,7 +125,7 @@ def compare(a,b)
   a.each do |e|
     yes = true if b.find{ |f| f['name'] == e['name'] && e['value'].to_s == f['value'].to_s }
   end
-  a.length == b.length && yes
+  (a.length == b.length && yes) || (a.empty? && b.empty?)
 end
 
 module CPEE
@@ -185,7 +188,7 @@ module CPEE
               indexes[me].delete(x)
               if call = e.find{|loc| loc[0] == 'c' }
                 item = get_record(File.join(dd,fdigest),call[1])
-                if compare(item.dig('event', 'data'),params)
+                if compare(item.dig('event', 'data') || [],params)
                   callback = @h['CPEE_CALLBACK']
                   start = Time.parse(item.dig('event', 'time:timestamp'))
                   e.delete(call)
@@ -199,6 +202,8 @@ module CPEE
                 @headers << Riddl::Header.new('CPEE-TWIN-MODEL', File.join(dname,sub_id) + '.xes.yaml.model')
                 @headers << Riddl::Header.new('CPEE-TWIN-TARGET', File.join(dname,sub_id) + '.xes.yaml')
                 @headers << Riddl::Header.new('CPEE-TWIN-TASKTYPE', instantiate[0])
+                @headers << Riddl::Header.new('CPEE-TWIN-ENGINE', @h['CPEE_ATTR_TWIN_ENGINE'])
+                @headers << Riddl::Header.new('CPEE-TWIN-TRANSLATE', @h['CPEE_ATTR_TWIN_TRANSLATE'])
                 @status = 561
                 return
               else
