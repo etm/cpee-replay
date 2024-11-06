@@ -91,17 +91,17 @@ def get_record(name,where)
   end
   ffile.seek(where['s'],IO::SEEK_SET)
   item = YAML::load(ffile.read(where['l']))
-  ffile.close unless name.is_a? String
+  ffile.close if name.is_a? String
   item
 end
 
 def send_back(fname, event, callback, start)
   ffile = File.open(fname)
-  event.each do |sendbacks|
+  event.each_with_index do |sendbacks, index|
     item = get_record(ffile,sendbacks[1])
     ts = Time.parse(item.dig('event', 'time:timestamp'))
     dur = ts - start
-    Thread.new do
+    Thread.new(item,dur,callback,event,index) do |item, duration, callback, event, index|
       sleep dur
       client = Riddl::Client.new(callback)
       res = item.dig('event','raw')&.map do |i|
@@ -110,6 +110,9 @@ def send_back(fname, event, callback, start)
         else
           Riddl::Parameter::Simple.new(i['name'],i['data'])
         end
+      end
+      unless event.length == index + 1
+        res << Riddl::Header.new('CPEE-UPDATE', 'true')
       end
       client.put res
     end
@@ -122,7 +125,7 @@ def compare(a,b)
   a.each do |e|
     yes = true if b.find{ |f| f['name'] == e['name'] && e['value'].to_s == f['value'].to_s }
   end
-  a.length == b.length && yes
+  (a.length == b.length && yes) || (a.empty? && b.empty?)
 end
 
 module CPEE
@@ -132,16 +135,16 @@ module CPEE
 
     class DoIt < Riddl::Implementation
       def response
-        if @h['CPEE_ATTR_TWIN_TARGET']
+        if @h['CPEE_ATTR_SIM_TARGET']
           dd = @a[0]
           indexes = @a[1]
           me = @h['CPEE_INSTANCE_UUID']
 
-          fdigest = Digest::SHA256.hexdigest(@h['CPEE_ATTR_TWIN_TARGET'])
-          idigest = Digest::SHA256.hexdigest(@h['CPEE_ATTR_TWIN_TARGET'] + '.index')
+          fdigest = Digest::SHA256.hexdigest(@h['CPEE_ATTR_SIM_TARGET'])
+          idigest = Digest::SHA256.hexdigest(@h['CPEE_ATTR_SIM_TARGET'] + '.index')
           unless File.exist?(File.join(dd,fdigest)) #{{{
             ffile = File.open(File.join(dd,fdigest),'w+')
-            request = Typhoeus::Request.new(@h['CPEE_ATTR_TWIN_TARGET'])
+            request = Typhoeus::Request.new(@h['CPEE_ATTR_SIM_TARGET'])
             request.on_headers do |response|
               if response.code != 200
                 raise "Request failed"
@@ -157,7 +160,7 @@ module CPEE
           end #}}}
           unless File.exist?(File.join(dd,idigest)) #{{{
             ifile = File.open(File.join(dd,idigest),'w+')
-            request = Typhoeus::Request.new(@h['CPEE_ATTR_TWIN_TARGET'] + '.index')
+            request = Typhoeus::Request.new(@h['CPEE_ATTR_SIM_TARGET'] + '.index')
             request.on_headers do |response|
               if response.code != 200
                 raise "Request failed"
@@ -185,7 +188,7 @@ module CPEE
               indexes[me].delete(x)
               if call = e.find{|loc| loc[0] == 'c' }
                 item = get_record(File.join(dd,fdigest),call[1])
-                if compare(item.dig('event', 'data'),params)
+                if compare(item.dig('event', 'data') || [],params)
                   callback = @h['CPEE_CALLBACK']
                   start = Time.parse(item.dig('event', 'time:timestamp'))
                   e.delete(call)
@@ -193,12 +196,14 @@ module CPEE
               end
               if instantiate = e.find{|loc| loc[0] == 'i' }
                 item = get_record(File.join(dd,fdigest),instantiate[1])
-                dname = File.dirname(@h['CPEE_ATTR_TWIN_TARGET'])
+                dname = File.dirname(@h['CPEE_ATTR_SIM_TARGET'])
                 sub_id = item.dig('event','raw','CPEE-INSTANCE-UUID')
 
-                @headers << Riddl::Header.new('CPEE-TWIN-MODEL', File.join(dname,sub_id) + '.xes.yaml.model')
-                @headers << Riddl::Header.new('CPEE-TWIN-TARGET', File.join(dname,sub_id) + '.xes.yaml')
-                @headers << Riddl::Header.new('CPEE-TWIN-TASKTYPE', instantiate[0])
+                @headers << Riddl::Header.new('CPEE-SIM-MODEL', File.join(dname,sub_id) + '.xes.yaml.model')
+                @headers << Riddl::Header.new('CPEE-SIM-TARGET', File.join(dname,sub_id) + '.xes.yaml')
+                @headers << Riddl::Header.new('CPEE-SIM-TASKTYPE', instantiate[0])
+                @headers << Riddl::Header.new('CPEE-SIM-ENGINE', @h['CPEE_ATTR_SIM_ENGINE'])
+                @headers << Riddl::Header.new('CPEE-SIM-TRANSLATE', @h['CPEE_ATTR_SIM_TRANSLATE'])
                 @status = 561
                 return
               else
