@@ -6,6 +6,24 @@ require 'fileutils'
 
 exname = File.basename($0)
 
+def wrap(s, width=78, indent=18, extra_indent=4) #{{{
+	lines = []
+	line, s = s[0..indent-2], s[indent..-1]
+  s.split(/\n/).each do |ss|
+    ss.split(/[ \t]+/).each do |word|
+      if line.size + word.size >= width
+        lines << line
+        line = (" " * (indent + extra_indent)) + word
+      else
+        line << " " << word
+      end
+    end
+    lines << line if line
+    line = (" " * (indent-1))
+  end
+	return lines.join "\n"
+end #}}}
+
 ARGV.options { |opt|
   opt.summary_indent = ' ' * 2
   opt.summary_width = 15
