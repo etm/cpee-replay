@@ -9,12 +9,12 @@ To install the replayer service go to the commandline
  ./task start
 ```
 
-The service is running under port 9300. If this port has to be changed (or the
+The service is running under port 9399. If this port has to be changed (or the
 host, or local-only access, ...), create a file log.conf and add one
 or many of the following yaml keys:
 
 ```yaml
- :port: 9250
+ :port: 9399
  :host: cpee.org
  :bind: 127.0.0.1
 ```
