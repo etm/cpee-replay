@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name             = "cpee-replay"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.platform         = Gem::Platform::RUBY
-  s.license          = "LGPL-3.0"
+  s.license          = "GPL-3.0-or-later"
   s.summary          = "Replay .xes.yaml for the cloud process execution engine (cpee.org)"
 
   s.description      = "see http://cpee.org"
