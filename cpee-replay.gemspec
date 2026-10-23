@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>=3.2.0'
 
-  s.authors          = ['Juergen eTM Mangler']
+  s.authors          = ['Juergen eTM Mangler', 'Matthias Ehrendorfer']
 
   s.email            = 'juergen.mangler@gmail.com'
   s.homepage         = 'http://cpee.org/'
